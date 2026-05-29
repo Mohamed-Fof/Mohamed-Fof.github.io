@@ -254,12 +254,63 @@ footer p { font-size: 0.9rem; }
 .bot-note { color: #999; font-size: 0.8rem; margin-top: 0.8rem; }
 
 /* RESPONSIVE */
+
+/* Tablette large (≤ 1024px) */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: 3rem; }
+  .about-content { gap: 2rem; }
+  .adia-container { gap: 2rem; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tablette portrait (≤ 900px) */
 @media (max-width: 900px) {
-  .hero { flex-direction: column; text-align: center; padding: 7rem 5% 3rem; gap: 2rem; }
+  nav ul { display: none; }
+  .hamburger { display: block; }
+  .hero { flex-direction: column-reverse; text-align: center; padding: 7rem 5% 3rem; gap: 2rem; }
   .hero-text h1 { font-size: 2.5rem; }
   .hero-btns { justify-content: center; }
   .social-links { justify-content: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
   .about-content { grid-template-columns: 1fr; }
-  nav ul { display: none; }
-  .hamburger { display: block; }
+  .avatar-img { width: 200px; height: 200px; }
+  .adia-container { flex-direction: column; align-items: center; }
+  .adia-services { max-width: 100%; width: 100%; }
+  .adia-bot { width: 100%; max-width: 400px; }
+}
+
+/* Téléphone (≤ 600px) */
+@media (max-width: 600px) {
+  nav { padding: 0.8rem 5%; }
+  .hero { padding: 6rem 5% 2.5rem; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text h2 { font-size: 0.95rem; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+  .section-header h2 { font-size: 1.6rem; }
+  .about, .experience, .projets,
+  .competences, .contact, .adia-section { padding: 4rem 5%; }
+  .avatar-img { width: 160px; height: 160px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .projets-grid { grid-template-columns: 1fr; }
+  .contact-cards { flex-direction: column; align-items: center; }
+  .contact-card { width: 100%; max-width: 320px; }
+  .timeline { padding-left: 1.5rem; }
+  .tl-dot { left: -1.9rem; }
+  .edu-item { flex-direction: column; gap: 0.3rem; }
+  .edu-year { min-width: unset; }
+  .adia-services { max-width: 100%; }
+  .bot-note { font-size: 0.75rem; }
+}
+
+/* Petit téléphone (≤ 400px) */
+@media (max-width: 400px) {
+  .hero-text h1 { font-size: 1.7rem; }
+  .hero-hello { font-size: 0.95rem; }
+  .avatar-img { width: 130px; height: 130px; }
+  .section-header h2 { font-size: 1.4rem; }
+  .tl-content { padding: 1rem; }
+  .bot-card { padding: 1.2rem; }
+  .adia-item { padding: 0.8rem 1rem; }
+  .contact-card { padding: 1.2rem 1rem; }
 }
