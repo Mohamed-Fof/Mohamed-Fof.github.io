@@ -430,12 +430,16 @@
         });
         const data = await res.json();
         removeTyping();
+        if (data.error) {
+          appendMessage('assistant', "⚠️ Service temporairement indisponible. Contacte Mohamed directement : fofana12ad@gmail.com");
+          return;
+        }
         const reply = data.reply || "Désolé, une erreur est survenue.";
         appendMessage('assistant', reply);
         chatHistory.push({ role: 'assistant', content: reply });
       } catch {
         removeTyping();
-        appendMessage('assistant', "Impossible de contacter le serveur. Réessaie dans un moment.");
+        appendMessage('assistant', "Impossible de contacter le serveur. Contacte Mohamed : fofana12ad@gmail.com");
       }
     }
 
