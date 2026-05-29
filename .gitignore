@@ -1,0 +1,14 @@
+# Photos personnelles
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.webp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Environnement
+.env
+.env.local
