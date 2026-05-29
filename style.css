@@ -169,6 +169,12 @@ nav ul a:hover { color: var(--primary); }
 .projet-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; }
 .projet-icon { font-size: 1.8rem; }
 .projet-top-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
+.Domaine {
+  font-size: 0.72rem; font-weight: 600;
+  color: #7c3aed; background: #f5f3ff;
+  padding: 0.2rem 0.7rem; border-radius: 20px;
+  align-self: center;
+}
 .projet-links a { color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
 .projet-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
 .projet-card p { color: var(--gray); font-size: 0.85rem; margin-bottom: 0.8rem; }
@@ -252,6 +258,10 @@ footer p { font-size: 0.9rem; }
 .bot-status { color: #16a34a; font-weight: 600; margin-top: 0.5rem; }
 .btn-large { padding: 1rem 2rem; font-size: 1rem; display: inline-block; }
 .bot-note { color: #999; font-size: 0.8rem; margin-top: 0.8rem; }
+.adia-tagline {
+  color: var(--gray); font-size: 0.95rem; font-style: italic;
+  max-width: 560px; margin: -1.5rem auto 2.5rem;
+}
 
 /* RESPONSIVE */
 
