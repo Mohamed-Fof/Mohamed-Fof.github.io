@@ -437,6 +437,12 @@
         const reply = data.reply || "Désolé, une erreur est survenue.";
         appendMessage('assistant', reply);
         chatHistory.push({ role: 'assistant', content: reply });
+
+        // Dossier complet : désactiver la saisie
+        if (data.completed) {
+          document.getElementById('chat-input').disabled = true;
+          document.getElementById('chat-input').placeholder = "Dossier envoyé — Mohamed vous contactera sur WhatsApp";
+        }
       } catch {
         removeTyping();
         appendMessage('assistant', "Impossible de contacter le serveur. Contacte Mohamed : fofana12ad@gmail.com");
