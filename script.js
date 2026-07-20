@@ -49,13 +49,14 @@ const hamburger = document.getElementById('hamburger');
 const navUl = document.querySelector('nav ul');
 
 function openMenu() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   navUl.style.display = 'flex';
   navUl.style.flexDirection = 'column';
   navUl.style.position = 'absolute';
   navUl.style.top = '70px';
   navUl.style.right = '5%';
   navUl.style.left = '5%';
-  navUl.style.background = '#fff';
+  navUl.style.background = isDark ? '#1e293b' : '#fff';
   navUl.style.padding = '1rem 1.5rem';
   navUl.style.borderRadius = '12px';
   navUl.style.boxShadow = '0 10px 30px rgba(0,0,0,0.12)';

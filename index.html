@@ -13,35 +13,45 @@
   <nav id="navbar">
     <div class="logo">MF</div>
     <ul>
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#experience">Expérience</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#adia">Mon Agence</a></li>
+      <li><a href="#accueil" data-i18n="nav_accueil">Accueil</a></li>
+      <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">Expérience</a></li>
+      <li><a href="#projets" data-i18n="nav_projets">Projets</a></li>
+      <li><a href="#competences" data-i18n="nav_comp">Compétences</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      <li><a href="#adia" data-i18n="nav_agence">Mon Agence</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">☰</div>
+    <div class="nav-controls">
+      <button class="toggle-btn" id="lang-toggle" title="Switch language" onclick="toggleLang()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" title="Changer le thème" onclick="toggleTheme()">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="accueil" class="hero">
     <div class="hero-text">
-      <p class="hero-hello">Bonjour, je suis</p>
+      <p class="hero-hello" data-i18n="hero_hello">Bonjour, je suis</p>
       <h1>Mohamed <span>Fofana</span></h1>
-      <h2>Étudiant en Mathématiques & Informatique Appliquées</h2>
-      <p class="hero-desc">
-        Bachelor MIASHS – Économie | Université Grenoble Alpes<br/>
+      <h2 data-i18n="hero_subtitle">Étudiant en Master 1 — Mathématiques Appliquées, Statistique</h2>
+      <p class="hero-desc" data-i18n-html="hero_desc">
+        Master 1 MAS — Université Clermont Auvergne | Ex-Licence MIASHS UGA<br/>
         Passionné par l'IA, la Data Science, les Statistiques et la Finance
       </p>
       <div class="hero-btns">
-        <a href="#projets" class="btn-primary">Voir mes projets</a>
-        <a href="mailto:fofana12ad@gmail.com" class="btn-outline">Me contacter</a>
+        <a href="#projets" class="btn-primary" data-i18n="hero_btn_projects">Voir mes projets</a>
+        <a href="mailto:fofana12ad@gmail.com" class="btn-outline" data-i18n="hero_btn_contact">Me contacter</a>
       </div>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/mohamed-fofana-05720a28b/" target="_blank" title="LinkedIn">in</a>
-        <a href="https://github.com/Mohamed-Fof" target="_blank" title="GitHub">⌥</a>
-        <a href="mailto:fofana12ad@gmail.com" title="Email">✉</a>
+        <a href="https://github.com/Mohamed-Fof" target="_blank" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        <a href="mailto:fofana12ad@gmail.com" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
     </div>
     <div class="hero-avatar">
@@ -52,37 +62,48 @@
   <!-- ABOUT -->
   <section id="about" class="about">
     <div class="section-header">
-      <h2>À propos de moi</h2>
+      <h2 data-i18n="about_title">À propos de moi</h2>
       <div class="underline"></div>
     </div>
     <div class="about-content">
       <div class="about-text">
-        <p>
-          Étudiant en 3ème année de licence MIASHS (Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales), parcours Économie, à l'Université Grenoble Alpes.
+        <p data-i18n="about_bio1">
+          Étudiant en Master 1 Mathématiques Appliquées, Statistique (MAS) à l'Université Clermont Auvergne, issu d'une Licence MIASHS parcours Économie à l'Université Grenoble Alpes.
         </p>
-        <p>
+        <p data-i18n="about_bio2">
           J'ai un fort intérêt pour les mathématiques appliquées, notamment les statistiques, les probabilités, l'intelligence artificielle et la data science, ainsi que leurs applications en finance et en assurance.
         </p>
         <div class="about-infos">
-          <div class="info-item"><span>📍</span> Grenoble, France</div>
-          <div class="info-item"><span>🎓</span> Université Grenoble Alpes</div>
-          <div class="info-item"><span>📧</span> fofana12ad@gmail.com</div>
-          <div class="info-item"><span>📱</span> 0761263842</div>
-          <div class="info-item"><span>🌍</span> Français (natif) | Anglais (B1) | Allemand (débutant)</div>
-          <div class="info-item"><span>🇨🇮</span> Originaire de Côte d'Ivoire</div>
+          <div class="info-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Clermont-Ferrand, France</div>
+          <div class="info-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Université Clermont Auvergne</div>
+          <div class="info-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> fofana12ad@gmail.com</div>
+          <div class="info-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Français (natif) | Anglais (B1) | Allemand (débutant)</div>
+          <div class="info-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Originaire de Côte d'Ivoire</div>
         </div>
       </div>
       <div class="education">
-        <h3>🎓 Formation</h3>
+        <h3>Formation</h3>
+        <div class="edu-item">
+          <div class="edu-year">2026 – en cours</div>
+          <div class="edu-detail">
+            <h4><a href="https://www.uca.fr" target="_blank" style="color:inherit;text-decoration:none;">Université Clermont Auvergne</a></h4>
+            <p>Master 1 Mathématiques Appliquées, Statistique (MAS)</p>
+            <small>Clermont-Ferrand, France</small>
+            <div class="tags">
+              <span>Statistiques</span><span>Big Data</span>
+              <span>SAS</span><span>Data Science</span>
+            </div>
+          </div>
+        </div>
         <div class="edu-item">
           <div class="edu-year">2024 – 2026</div>
           <div class="edu-detail">
             <h4>Université Grenoble Alpes</h4>
-            <p>BSc L2 & L3 MIASHS – Parcours Économie</p>
+            <p>Licence MIASHS – Parcours Sciences Économiques</p>
             <small>Grenoble, France</small>
             <div class="tags">
-              <span>Mathématiques</span><span>Statistiques</span>
-              <span>Économétrie</span><span>Informatique</span>
+              <span>Machine Learning</span><span>Théorie des jeux</span>
+              <span>Économie industrielle</span><span>Statistique paramétrique</span>
             </div>
           </div>
         </div>
@@ -90,11 +111,12 @@
           <div class="edu-year">2022 – 2024</div>
           <div class="edu-detail">
             <h4>Université Nangui Abrogoua</h4>
-            <p>BSc L1 & L2 Mathématiques – Informatique</p>
-            <small>Abidjan, Côte d'Ivoire 🏆 Major de promotion</small>
+            <p>Licence Mathématiques – Informatique</p>
+            <small>Abidjan, Côte d'Ivoire — Major de promotion</small>
             <div class="tags">
-              <span>Mathématiques</span><span>Physique</span>
-              <span>Informatique</span><span>Économie</span>
+              <span>Mathématiques</span><span>Analyse</span>
+              <span>Algèbre</span><span>Probabilités-Statistiques</span>
+              <span>Algorithmique</span><span>Gestion de projet</span>
             </div>
           </div>
         </div>
@@ -105,7 +127,7 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="experience">
     <div class="section-header">
-      <h2>Expérience Professionnelle</h2>
+      <h2 data-i18n="exp_title">Expérience Professionnelle</h2>
       <div class="underline"></div>
     </div>
     <div class="timeline">
@@ -161,14 +183,14 @@
   <!-- PROJETS -->
   <section id="projets" class="projets">
     <div class="section-header">
-      <h2>Projets Académiques</h2>
+      <h2 data-i18n="projets_title">Projets Académiques</h2>
       <div class="underline"></div>
     </div>
     <div class="projets-grid">
 
       <div class="projet-card">
         <div class="projet-header">
-          <span class="projet-icon">🤖</span>
+          <span class="projet-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></span>
           <span class="Domaine">Machine Learning</span>
           <div class="projet-top-right">
             <div class="projet-niveau">L3-S6</div>
@@ -182,7 +204,7 @@
 
       <div class="projet-card">
         <div class="projet-header">
-          <span class="projet-icon">📊</span>
+          <span class="projet-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
           <span class="Domaine">Économétrie</span>
           <div class="projet-top-right">
             <div class="projet-niveau">L3-S5</div>
@@ -196,7 +218,7 @@
 
       <div class="projet-card">
         <div class="projet-header">
-          <span class="projet-icon">🎮</span>
+          <span class="projet-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
           <span class="Domaine">Informatique</span>
           <div class="projet-top-right">
             <div class="projet-niveau">L2-S4</div>
@@ -210,7 +232,7 @@
 
       <div class="projet-card">
         <div class="projet-header">
-          <span class="projet-icon">🧪</span>
+          <span class="projet-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l3.5 6A1 1 0 0 1 17.6 21H6.4a1 1 0 0 1-.9-1.5L9 14V3z"/><line x1="6" y1="8" x2="18" y2="8"/></svg></span>
           <span class="Domaine">Micro-Économie</span>
           <div class="projet-top-right">
             <div class="projet-niveau">L2-S4</div>
@@ -228,13 +250,13 @@
   <!-- COMPETENCES -->
   <section id="competences" class="competences">
     <div class="section-header">
-      <h2>Compétences</h2>
+      <h2 data-i18n="comp_title">Compétences</h2>
       <div class="underline"></div>
     </div>
     <div class="skills-grid">
 
       <div class="skill-category">
-        <h3>💻 Programmation</h3>
+        <h3>Programmation</h3>
         <div class="skill-bars">
           <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
           <div class="skill-bar"><span>R / RStudio</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
@@ -246,7 +268,7 @@
       </div>
 
       <div class="skill-category">
-        <h3>📈 Data Science & IA</h3>
+        <h3>Data Science & IA</h3>
         <div class="tags-list">
           <span>Machine Learning</span><span>Data Analysis</span>
           <span>Predictive Modeling</span><span>Économétrie</span>
@@ -256,7 +278,7 @@
       </div>
 
       <div class="skill-category">
-        <h3>📊 Statistiques & Finance</h3>
+        <h3>Statistiques & Finance</h3>
         <div class="tags-list">
           <span>Probabilités</span><span>ANOVA</span>
           <span>Théorie des portefeuilles</span><span>Gestion du risque</span>
@@ -266,7 +288,7 @@
       </div>
 
       <div class="skill-category">
-        <h3>🛠️ Outils & Technologies</h3>
+        <h3>Outils & Technologies</h3>
         <div class="tags-list">
           <span>Git / GitHub</span><span>VS Code</span>
           <span>Linux / UNIX</span><span>LaTeX</span>
@@ -281,45 +303,40 @@
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="section-header">
-      <h2>Me Contacter</h2>
+      <h2 data-i18n="contact_title">Me Contacter</h2>
       <div class="underline"></div>
     </div>
-    <p class="contact-intro">Ouvert aux opportunités de stage, alternance ou collaboration sur des projets Data/IA/Finance.</p>
+    <p class="contact-intro" data-i18n="contact_intro">Ouvert aux opportunités de stage, alternance ou collaboration sur des projets Data/IA/Finance.</p>
     <div class="contact-cards">
       <a href="mailto:fofana12ad@gmail.com" class="contact-card">
-        <span>✉️</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
         <h4>Email</h4>
         <p>fofana12ad@gmail.com</p>
       </a>
       <a href="https://www.linkedin.com/in/mohamed-fofana-05720a28b/" target="_blank" class="contact-card">
-        <span>💼</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
         <h4>LinkedIn</h4>
         <p>linkedin.com/in/mohamed-fofana</p>
       </a>
       <a href="https://github.com/Mohamed-Fof" target="_blank" class="contact-card">
-        <span>⌥</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
         <h4>GitHub</h4>
         <p>github.com/Mohamed-Fof</p>
       </a>
-      <div class="contact-card">
-        <span>📱</span>
-        <h4>Téléphone</h4>
-        <p>0761263842</p>
-      </div>
     </div>
   </section>
 
   <!-- SECTION MF CONSULTING — AGENCE ACCOMPAGNEMENT -->
   <section id="adia" class="adia-section">
     <div class="section-header">
-      <h2>🎓 Mon Agence — MF Consulting</h2>
+      <h2 data-i18n="adia_title">Mon Agence — MF Consulting</h2>
       <div class="underline"></div>
     </div>
-    <p class="subtitle-adia">
-      🎓 J’accompagne les étudiants internationaux dans la réalisation de leurs projets d’études en France 🇫🇷<br/>
+    <p class="subtitle-adia" data-i18n-html="adia_subtitle">
+      J’accompagne les étudiants internationaux dans la réalisation de leurs projets d’études en France 🇫🇷<br/>
       Mon objectif : aider chaque étudiant à poursuivre ses rêves académiques avec un accompagnement personnalisé et humain.
     </p>
-    <p class="adia-tagline">Avec sérieux, écoute et expertise, je guide les étudiants à chaque étape de leur parcours vers la France.</p>
+    <p class="adia-tagline" data-i18n="adia_tagline">Avec sérieux, écoute et expertise, je guide les étudiants à chaque étape de leur parcours vers la France.</p>
     <div class="adia-container">
       <div class="adia-services">
         <div class="adia-item"><span>📋</span><p>Suivi et préparation du dossier d’admission</p></div>
@@ -506,5 +523,105 @@
   </script>
 
   <script src="script.js"></script>
+
+  <script>
+    /* ===== THEME TOGGLE ===== */
+    (function() {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      updateThemeIcon(saved);
+    })();
+
+    function updateThemeIcon(theme) {
+      const sun = document.getElementById('icon-sun');
+      const moon = document.getElementById('icon-moon');
+      if (!sun || !moon) return;
+      if (theme === 'dark') {
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+      } else {
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon(next);
+    }
+
+    /* ===== i18n FR/EN TOGGLE ===== */
+    const i18n = {
+      fr: {
+        nav_accueil: 'Accueil', nav_about: 'À propos', nav_exp: 'Expérience',
+        nav_projets: 'Projets', nav_comp: 'Compétences', nav_contact: 'Contact',
+        nav_agence: 'Mon Agence',
+        hero_hello: 'Bonjour, je suis',
+        hero_subtitle: 'Étudiant en Master 1 — Mathématiques Appliquées, Statistique',
+        hero_desc: 'Master 1 MAS — Université Clermont Auvergne | Ex-Licence MIASHS UGA<br/>Passionné par l\'IA, la Data Science, les Statistiques et la Finance',
+        hero_btn_projects: 'Voir mes projets',
+        hero_btn_contact: 'Me contacter',
+        about_title: 'À propos de moi',
+        about_bio1: 'Étudiant en Master 1 Mathématiques Appliquées, Statistique (MAS) à l\'Université Clermont Auvergne, issu d\'une Licence MIASHS parcours Économie à l\'Université Grenoble Alpes.',
+        about_bio2: 'J\'ai un fort intérêt pour les mathématiques appliquées, notamment les statistiques, les probabilités, l\'intelligence artificielle et la data science, ainsi que leurs applications en finance et en assurance.',
+        exp_title: 'Expérience Professionnelle',
+        projets_title: 'Projets Académiques',
+        comp_title: 'Compétences',
+        contact_title: 'Me Contacter',
+        contact_intro: 'Ouvert aux opportunités de stage, alternance ou collaboration sur des projets Data/IA/Finance.',
+        adia_title: 'Mon Agence — MF Consulting',
+        adia_subtitle: 'J\'accompagne les étudiants internationaux dans la réalisation de leurs projets d\'études en France 🇫🇷<br/>Mon objectif : aider chaque étudiant à poursuivre ses rêves académiques avec un accompagnement personnalisé et humain.',
+        adia_tagline: 'Avec sérieux, écoute et expertise, je guide les étudiants à chaque étape de leur parcours vers la France.'
+      },
+      en: {
+        nav_accueil: 'Home', nav_about: 'About', nav_exp: 'Experience',
+        nav_projets: 'Projects', nav_comp: 'Skills', nav_contact: 'Contact',
+        nav_agence: 'My Agency',
+        hero_hello: 'Hello, I am',
+        hero_subtitle: 'Master\'s Student — Applied Mathematics, Statistics',
+        hero_desc: 'MSc Applied Mathematics & Statistics — Université Clermont Auvergne | BSc MIASHS UGA<br/>Passionate about AI, Data Science, Statistics and Finance',
+        hero_btn_projects: 'View my projects',
+        hero_btn_contact: 'Contact me',
+        about_title: 'About me',
+        about_bio1: 'Master\'s student in Applied Mathematics and Statistics (MAS) at Université Clermont Auvergne, with a BSc in MIASHS (Economics track) from Université Grenoble Alpes.',
+        about_bio2: 'I have a strong interest in applied mathematics, including statistics, probability, artificial intelligence and data science, and their applications in finance and insurance.',
+        exp_title: 'Professional Experience',
+        projets_title: 'Academic Projects',
+        comp_title: 'Skills',
+        contact_title: 'Get in Touch',
+        contact_intro: 'Open to internship, work-study, or collaboration opportunities in Data / AI / Finance.',
+        adia_title: 'My Agency — MF Consulting',
+        adia_subtitle: 'I support international students in achieving their academic goals in France 🇫🇷<br/>My mission: help every student pursue their academic dreams with personalised, human guidance.',
+        adia_tagline: 'With dedication, attentiveness and expertise, I guide students at every step of their journey to France.'
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'fr';
+
+    function applyLang(lang) {
+      const dict = i18n[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+      document.getElementById('lang-label').textContent = lang === 'fr' ? 'EN' : 'FR';
+      document.documentElement.lang = lang;
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      localStorage.setItem('lang', currentLang);
+      applyLang(currentLang);
+    }
+
+    applyLang(currentLang);
+  </script>
 </body>
 </html>
