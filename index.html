@@ -93,7 +93,7 @@
             <h4><a href="https://www.uca.fr/formation/nos-formations/par-ufr-ecoles-et-iut/institut-des-sciences/ufr-de-mathematiques/master/master-maths-appliquees-statistique#presentation" target="_blank" style="color:inherit;text-decoration:none;">Université Clermont Auvergne</a></h4>
             <p data-i18n="edu_prog_uca">Master Mathématiques Appliquées, Statistique</p>
             <small data-i18n="edu_loc_uca">Clermont-Ferrand, France</small>
-            <div class="tags">
+            <div class="tags" data-i18n-html="edu_tags_uca">
               <span>Statistiques Bayésiennes</span><span>Probabilités</span>
               <span>Algorithme stochastique</span><span>IA</span><span>Analyse de données</span><span>Data Mining</span><span>Gestion Financière Marketing</span><span>SAS</span>
             </div>
@@ -105,7 +105,7 @@
             <h4><a href="https://formations.univ-grenoble-alpes.fr/fr/catalogue-2021/licence-XA/licence-mathematiques-et-informatique-appliquees-aux-sciences-humaines-et-sociales-miashs-IDIVNLE7.html" target="_blank" style="color:inherit;text-decoration:none;">Université Grenoble Alpes</a></h4>
             <p data-i18n="edu_prog_uga">Licence MIASHS – Parcours Sciences Économiques</p>
             <small data-i18n-html="edu_loc_uga">Grenoble, France<br/>Admis Éco-Stat ISFA Lyon | ISADS Paris Saclay</small>
-            <div class="tags">
+            <div class="tags" data-i18n-html="edu_tags_uga">
               <span>Machine Learning</span><span>Statistique paramétrique</span><span>IA</span><span>Théorie des jeux</span>
               <span>Économétrie</span><span>Programmation Avancée</span><span>Gestion de projet</span><span>Stage</span>
             </div>
@@ -117,7 +117,7 @@
             <h4>Université Nangui Abrogoua</h4>
             <p data-i18n="edu_prog_nangui">Licence Mathématiques – Informatique</p>
             <small data-i18n-html="edu_loc_nangui">Abidjan, Côte d'Ivoire<br/>Major de promotion</small>
-            <div class="tags">
+            <div class="tags" data-i18n-html="edu_tags_nangui">
               <span>Modélisation Mathématiques</span><span>Probabilités-Statistiques</span><span>Comptabilité</span>
               <span>Algorithmique et Programmation</span><span>Base de données</span><span>Gestion de projet</span>
             </div>
@@ -272,7 +272,7 @@
 
       <div class="skill-category">
         <h3 data-i18n="comp_ds">Data Science & IA</h3>
-        <div class="tags-list">
+        <div class="tags-list" data-i18n-html="skills_ds">
           <span>Machine Learning</span><span>Data Analysis</span>
           <span>Predictive Modeling</span><span>Économétrie</span>
           <span>Régression OLS</span><span>Monte Carlo</span>
@@ -282,7 +282,7 @@
 
       <div class="skill-category">
         <h3 data-i18n="comp_stats">Statistiques & Finance</h3>
-        <div class="tags-list">
+        <div class="tags-list" data-i18n-html="skills_stats">
           <span>Probabilités</span><span>ANOVA</span>
           <span>Théorie des portefeuilles</span><span>Gestion du risque</span>
           <span>Panel data</span><span>Inférence statistique</span>
@@ -292,7 +292,7 @@
 
       <div class="skill-category">
         <h3 data-i18n="comp_tools">Outils & Technologies</h3>
-        <div class="tags-list">
+        <div class="tags-list" data-i18n-html="skills_tools">
           <span>Git / GitHub</span><span>VS Code</span>
           <span>Linux / UNIX</span><span>LaTeX</span>
           <span>Gretl</span><span>SWI Prolog</span>
@@ -342,15 +342,15 @@
     <p class="adia-tagline" data-i18n="adia_tagline">Avec sérieux, écoute et expertise, je guide les étudiants à chaque étape de leur parcours vers la France.</p>
     <div class="adia-container">
       <div class="adia-services">
-        <div class="adia-item"><span>📋</span><p>Suivi et préparation du dossier d’admission</p></div>
+        <div class="adia-item"><span>📋</span><p data-i18n="adia_s1">Suivi et préparation du dossier d’admission</p></div>
         <div class="adia-item"><span>✍️</span><p data-i18n="adia_s2">Rédaction et correction de la lettre de motivation</p></div>
-        <div class="adia-item"><span>🎤</span><p>Préparation à l’entretien Campus France</p></div>
-        <div class="adia-item"><span>✈️</span><p>Accompagnement jusqu’à l’obtention du visa</p></div>
+        <div class="adia-item"><span>🎤</span><p data-i18n="adia_s3">Préparation à l’entretien Campus France</p></div>
+        <div class="adia-item"><span>✈️</span><p data-i18n="adia_s4">Accompagnement jusqu’à l’obtention du visa</p></div>
       </div>
       <div class="adia-bot">
         <div class="bot-card">
           <div class="bot-avatar">🤖</div>
-          <h3>ADIA Chat</h3>
+          <h3 data-i18n="adia_bot_title">ADIA Chat</h3>
           <p data-i18n="adia_bot_desc">Discutez avec notre agent pour démarrer votre dossier gratuitement</p>
           <div class="bot-status" data-i18n="adia_bot_status">🟢 En ligne 24h/24</div>
         </div>
@@ -626,7 +626,12 @@
         adia_note:'Gratuit · Sans engagement · Réponse en 24h',
         /* — FOOTER — */
         footer_main:'© 2026 Mohamed Fofana — Clermont-Ferrand, France',
-        footer_sub:'Fait avec ❤️ | HTML · CSS · JavaScript'
+        footer_sub:'Fait avec ❤️ | HTML · CSS · JavaScript',
+        adia_bot_title:'ADIA Chat',
+        /* — COMPÉTENCES tags — */
+        skills_ds:'<span>Machine Learning</span><span>Data Analysis</span><span>Predictive Modeling</span><span>Économétrie</span><span>Régression OLS</span><span>Monte Carlo</span><span>Séries temporelles</span><span>Tests statistiques</span>',
+        skills_stats:'<span>Probabilités</span><span>ANOVA</span><span>Théorie des portefeuilles</span><span>Gestion du risque</span><span>Panel data</span><span>Inférence statistique</span><span>Économie industrielle</span><span>Théorie des jeux</span>',
+        skills_tools:'<span>Git / GitHub</span><span>VS Code</span><span>Linux / UNIX</span><span>LaTeX</span><span>Gretl</span><span>SWI Prolog</span><span>Microsoft Office</span><span>Shell</span>',
       },
       en: {
         /* — NAV — */
@@ -696,7 +701,12 @@
         adia_note:'Free · No commitment · Response within 24h',
         /* — FOOTER — */
         footer_main:'© 2026 Mohamed Fofana — Clermont-Ferrand, France',
-        footer_sub:'Made with ❤️ | HTML · CSS · JavaScript'
+        footer_sub:'Made with ❤️ | HTML · CSS · JavaScript',
+        adia_bot_title:'ADIA Chat',
+        /* — SKILLS tags — */
+        skills_ds:'<span>Machine Learning</span><span>Data Analysis</span><span>Predictive Modeling</span><span>Econometrics</span><span>OLS Regression</span><span>Monte Carlo</span><span>Time Series</span><span>Statistical Tests</span>',
+        skills_stats:'<span>Probability</span><span>ANOVA</span><span>Portfolio Theory</span><span>Risk Management</span><span>Panel Data</span><span>Statistical Inference</span><span>Industrial Economics</span><span>Game Theory</span>',
+        skills_tools:'<span>Git / GitHub</span><span>VS Code</span><span>Linux / UNIX</span><span>LaTeX</span><span>Gretl</span><span>SWI Prolog</span><span>Microsoft Office</span><span>Shell</span>',
       }
     };
 
