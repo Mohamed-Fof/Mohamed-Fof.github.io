@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohamed-fof.github.io/sitemap.xml
