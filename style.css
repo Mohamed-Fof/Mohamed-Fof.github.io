@@ -48,13 +48,14 @@
 .toggle-btn:hover { border-color: var(--primary); color: var(--primary); }
 .toggle-btn svg { pointer-events: none; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--white);
   color: var(--dark);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -362,10 +363,10 @@ footer p { font-size: 0.9rem; }
   .hero-text h1 { font-size: 2rem; }
   .hero-text h2 { font-size: 0.95rem; }
   .hero-btns { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+  .btn-primary, .btn-outline, .btn-cv { width: 100%; max-width: 280px; text-align: center; justify-content: center; }
   .section-header h2 { font-size: 1.6rem; }
   .about, .experience, .projets,
-  .competences, .contact, .adia-section { padding: 4rem 5%; }
+  .competences, .contact, .adia-section { padding: 3.5rem 5%; }
   .avatar-img { width: 160px; height: 160px; }
   .skills-grid { grid-template-columns: 1fr; }
   .projets-grid { grid-template-columns: 1fr; }
@@ -377,6 +378,14 @@ footer p { font-size: 0.9rem; }
   .edu-year { min-width: unset; }
   .adia-services { max-width: 100%; }
   .bot-note { font-size: 0.75rem; }
+  /* Projet cards */
+  .projet-card { padding: 1rem; }
+  .tl-content { padding: 1rem 1.2rem; }
+  /* Modal chat plein écran sur téléphone */
+  #chat-modal > div { width: 96% !important; max-width: 100% !important; max-height: 92vh !important; border-radius: 12px !important; }
+  /* Adia tagline lisible */
+  .adia-tagline { font-size: 0.88rem; }
+  .subtitle-adia { font-size: 0.92rem; }
 }
 
 /* Petit téléphone (≤ 400px) */
