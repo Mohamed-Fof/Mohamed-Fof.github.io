@@ -66,7 +66,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  navUl.style.display = 'none';
+  navUl.removeAttribute('style');
   hamburger.textContent = '☰';
 }
 

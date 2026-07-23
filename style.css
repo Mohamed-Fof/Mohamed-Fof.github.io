@@ -322,9 +322,28 @@ footer p { font-size: 0.9rem; }
 
 /* Tablette portrait (≤ 900px) */
 @media (max-width: 900px) {
-  nav ul { display: none; }
-  .hamburger { display: block; }
-  .hero { flex-direction: column-reverse; text-align: center; padding: 7rem 5% 3rem; gap: 2rem; }
+  /* Nav toujours visible — barre horizontale scrollable */
+  nav { flex-wrap: wrap; padding: 0.6rem 4%; }
+  nav .logo { order: 1; flex: 1; }
+  nav .nav-controls { order: 2; }
+  .hamburger { display: none !important; }
+  nav ul {
+    order: 3;
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    flex: 0 0 100%;
+    gap: 0;
+    padding: 0.35rem 0 0.15rem;
+    margin-top: 0.35rem;
+    border-top: 1px solid var(--border);
+  }
+  nav ul::-webkit-scrollbar { display: none; }
+  nav ul li a { font-size: 0.73rem; white-space: nowrap; padding: 0.25rem 0.75rem; }
+  /* Reste du layout */
+  .hero { flex-direction: column-reverse; text-align: center; padding: 8rem 5% 3rem; gap: 2rem; }
   .hero-text h1 { font-size: 2.5rem; }
   .hero-btns { justify-content: center; }
   .social-links { justify-content: center; }
@@ -338,8 +357,8 @@ footer p { font-size: 0.9rem; }
 
 /* Téléphone (≤ 600px) */
 @media (max-width: 600px) {
-  nav { padding: 0.8rem 5%; }
-  .hero { padding: 6rem 5% 2.5rem; }
+  nav { padding: 0.5rem 4%; }
+  .hero { padding: 7.5rem 5% 2.5rem; }
   .hero-text h1 { font-size: 2rem; }
   .hero-text h2 { font-size: 0.95rem; }
   .hero-btns { flex-direction: column; align-items: center; }
