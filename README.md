@@ -12,7 +12,7 @@ Portfolio personnel déployé sur GitHub Pages.
 - Expériences professionnelles (stages AGEIS, GAEL, tutorat)
 - Projets académiques (Machine Learning, Économétrie, Prolog...)
 - Compétences (Python, R, MATLAB, SQL...)
-- Section **MF Consulting** avec chatbot IA (ADIA)
+- Section **MF Consulting** avec chatbot IA (Momo)
 
 ## Stack technique
 
