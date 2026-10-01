@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Content-Security-Policy (GitHub Pages n'autorise pas les en-têtes serveur) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://adia-backend.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>Jeux &amp; Société — Mohamed Fofana</title>
+
+  <meta name="description" content="Théorie des jeux, intelligence artificielle et cognition : un laboratoire interactif et une sélection de ressources jouables, par Mohamed Fofana." />
+  <link rel="canonical" href="https://mohamed-fof.github.io/jeux.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohamed-fof.github.io/jeux.html" />
+  <meta property="og:title" content="Jeux &amp; Société — Mohamed Fofana" />
+  <meta property="og:description" content="Un laboratoire interactif de théorie des jeux et une sélection de ressources sur l'IA, les modèles de société et la cognition." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">MF</a>
+    <ul>
+      <li><a href="index.html#accueil" data-i18n="nav_accueil">Accueil</a></li>
+      <li><a href="index.html#about" data-i18n="nav_about">À propos</a></li>
+      <li><a href="index.html#experience" data-i18n="nav_exp">Expérience</a></li>
+      <li><a href="index.html#projets" data-i18n="nav_projets">Projets</a></li>
+      <li><a href="index.html#competences" data-i18n="nav_comp">Compétences</a></li>
+      <li><a href="index.html#momo" data-i18n="nav_agence">Mon Agence</a></li>
+      <li><a href="jeux.html" class="actif" data-i18n="nav_jeux">Jeux &amp; Société</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="toggle-btn" id="lang-toggle" title="Switch language">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" title="Changer le thème">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </nav>
+
+  <main class="page-jeux">
+    <div class="section-header page-entete">
+      <h1 data-i18n="jeux_title">Jeux et Société</h1>
+      <div class="underline"></div>
+    </div>
+    <p class="jeux-intro" data-i18n="jeux_intro">Une sélection de ressources interactives pour apprendre en jouant : théorie des jeux, intelligence artificielle, modèles de société et tests de logique.</p>
+
+    <section class="famille" id="fam-theorie">
+      <h2 data-i18n="fam_tj_t">Théorie des jeux</h2>
+      <p class="famille-desc" data-i18n="fam_tj_d">L'étude des décisions quand le résultat de chacun dépend de ce que font les autres. Voici ses grandes familles, puis de quoi l'expérimenter.</p>
+
+      <div class="types-grille">
+      <article class="type-jeu">
+        <h4 data-i18n="t_coop_t">Coopératifs ou non coopératifs</h4>
+        <p data-i18n="t_coop_d">Les joueurs peuvent-ils passer des accords contraignants ? Si oui, l'analyse porte sur le partage du gain entre coalitions. Sinon, chacun décide seul, et c'est le cadre du dilemme du prisonnier.</p>
+      </article>
+      <article class="type-jeu">
+        <h4 data-i18n="t_somme_t">Somme nulle ou somme non nulle</h4>
+        <p data-i18n="t_somme_d">Dans un jeu à somme nulle, ce que l'un gagne, l'autre le perd exactement : les échecs, le poker. En somme non nulle, la coopération peut enrichir tout le monde, ou l'affrontement appauvrir tout le monde.</p>
+      </article>
+      <article class="type-jeu">
+        <h4 data-i18n="t_ordre_t">Simultanés ou séquentiels</h4>
+        <p data-i18n="t_ordre_d">Pile ou face se joue en même temps et s'analyse avec une matrice. Les échecs se jouent à tour de rôle et s'analysent avec un arbre, résolu par récurrence à rebours.</p>
+      </article>
+      <article class="type-jeu">
+        <h4 data-i18n="t_info_t">Information complète ou incomplète</h4>
+        <p data-i18n="t_info_d">Connaît-on les gains et les intentions des autres ? Quand ce n'est pas le cas, on entre dans les jeux bayésiens, où les joueurs émettent des signaux et se forgent des croyances.</p>
+      </article>
+      <article class="type-jeu">
+        <h4 data-i18n="t_repete_t">Jeux répétés</h4>
+        <p data-i18n="t_repete_d">La même partie recommence avec les mêmes joueurs. La réputation devient un actif, et la coopération peut s'installer sans contrat. C'est le cadre du laboratoire ci-dessous.</p>
+      </article>
+      <article class="type-jeu">
+        <h4 data-i18n="t_evo_t">Jeux évolutionnaires</h4>
+        <p data-i18n="t_evo_d">Les stratégies ne sont plus choisies mais héritées : les plus performantes se répandent dans la population. On y cherche les stratégies évolutionnairement stables.</p>
+      </article>
+      </div>
+
+      <div class="bloc-savoir">
+  <div class="notion">
+    <h3 data-i18n="notion_titre">Le dilemme du prisonnier</h3>
+    <p data-i18n="notion_1">Deux joueurs gagnent plus en coopérant qu'en se trahissant mutuellement. Mais chacun gagne encore davantage en trahissant l'autre, qui coopère. Chacun suit donc son intérêt, et tous les deux finissent perdants. C'est le modèle formel de situations où l'intérêt individuel s'oppose à l'intérêt collectif.</p>
+    <p data-i18n="notion_2">Son importance vient de la répétition. Quand les mêmes joueurs se recroisent, la coopération peut émerger sans contrat ni autorité. En 1980, Robert Axelrod fait s'affronter des programmes envoyés par des chercheurs du monde entier. La stratégie gagnante, Tit for Tat, tenait en quatre lignes : coopérer, puis rendre coup pour coup. Ce résultat structure aujourd'hui l'analyse des accords climatiques, de la concurrence entre entreprises et de la confiance en ligne.</p>
+  </div>
+      <p class="passerelle" data-i18n="passerelle">Reste à l'éprouver. Les cinq agents ci-dessous appliquent chacun une stratégie différente face à ce même dilemme : affrontez-les, puis regardez laquelle survit quand tout le monde joue.</p>
+  <div class="jeu-lab">
+    <div class="lab-entete">
+      <h3 class="lab-nom" data-i18n="lab_nom">Le Laboratoire de la Confiance</h3>
+      <p class="lab-accroche" data-i18n="lab_accroche">Cinq caractères, un même dilemme : coopérer ou trahir. Jouez contre eux, faites-les s'affronter, puis regardez qui survit.</p>
+    </div>
+    <div class="lab-onglets" role="tablist">
+      <button type="button" class="lab-onglet actif" data-panneau="p-duel" data-i18n="ong_duel">Duel</button>
+      <button type="button" class="lab-onglet" data-panneau="p-match" data-i18n="ong_match">Match</button>
+      <button type="button" class="lab-onglet" data-panneau="p-tournoi" data-i18n="ong_tournoi">Tournoi</button>
+      <button type="button" class="lab-onglet" data-panneau="p-evolution" data-i18n="ong_evolution">Évolution</button>
+    </div>
+
+    <!-- noms des stratégies, partagés par les trois panneaux -->
+    <div class="strat-noms" hidden>
+      <span data-nom="copieur" data-i18n="strat_copieur">Donnant-donnant</span>
+      <span data-nom="mouton" data-i18n="strat_mouton">Coopérateur naïf</span>
+      <span data-nom="tricheur" data-i18n="strat_tricheur">Traître systématique</span>
+      <span data-nom="rancunier" data-i18n="strat_rancunier">Rancunier</span>
+      <span data-nom="detective" data-i18n="strat_detective">Détective</span>
+    </div>
+
+    <section id="p-duel" class="lab-panneau">
+      <h3 data-i18n="lab_title">À vous de jouer : coopérer ou trahir ?</h3>
+      <p class="lab-sous-titre" data-i18n="lab_sous_titre">Dix tours face à la stratégie de votre choix. Coopération mutuelle : 2 points chacun. Trahir seul : 3 points contre 1 point perdu. Trahison mutuelle : rien.</p>
+
+      <div class="lab-strats" role="group">
+        <button type="button" class="strat actif" data-strat="copieur" data-i18n="strat_copieur">Donnant-donnant</button>
+        <button type="button" class="strat" data-strat="mouton" data-i18n="strat_mouton">Coopérateur naïf</button>
+        <button type="button" class="strat" data-strat="tricheur" data-i18n="strat_tricheur">Traître systématique</button>
+        <button type="button" class="strat" data-strat="rancunier" data-i18n="strat_rancunier">Rancunier</button>
+        <button type="button" class="strat" data-strat="detective" data-i18n="strat_detective">Détective</button>
+      </div>
+      <div class="duel-perso"><div class="agent-visage" id="visage-duel"></div><p class="strat-desc" id="strat-desc"></p></div>
+
+      <div class="lab-scores">
+        <div class="lab-score"><span data-i18n="lab_vous">Vous</span><strong id="score-moi">0</strong></div>
+        <div class="lab-score lab-tour"><span data-i18n="lab_tour">Tour</span><strong id="tour">1 / 10</strong></div>
+        <div class="lab-score"><span data-i18n="lab_autre">L'autre</span><strong id="score-adv">0</strong></div>
+      </div>
+
+      <div class="lab-actions">
+        <button type="button" id="btn-coop" class="btn-coop" data-i18n="lab_coop">Coopérer</button>
+        <button type="button" id="btn-trahir" class="btn-trahir" data-i18n="lab_trahir">Trahir</button>
+      </div>
+
+      <div class="lab-histo" id="histo" aria-hidden="true"></div>
+      <p class="lab-verdict" id="verdict" role="status"></p>
+      <button type="button" id="btn-rejouer" class="btn-rejouer" hidden data-i18n="lab_rejouer">Rejouer</button>
+    </section>
+
+    <section id="p-match" class="lab-panneau" hidden>
+      <h3 data-i18n="match_title">Regardez-les s'affronter</h3>
+      <p class="lab-sous-titre" data-i18n="match_desc">Choisissez deux caractères et suivez la partie tour par tour.</p>
+      <div class="match-scene">
+        <div class="match-perso">
+          <div class="agent-visage" id="visage-a"></div>
+          <select id="sel-a" class="match-select" aria-label="Premier joueur"></select>
+          <strong class="match-score" id="match-score-a">0</strong>
+        </div>
+        <span class="match-vs" data-i18n="match_vs">contre</span>
+        <div class="match-perso">
+          <div class="agent-visage" id="visage-b"></div>
+          <select id="sel-b" class="match-select" aria-label="Second joueur"></select>
+          <strong class="match-score" id="match-score-b">0</strong>
+        </div>
+      </div>
+      <div class="match-histo" id="match-histo" aria-hidden="true"></div>
+      <button type="button" id="btn-match" class="btn-lancer" data-i18n="match_btn">Regarder le match</button>
+      <p class="lab-verdict" id="match-note" role="status"></p>
+    </section>
+
+    <section id="p-tournoi" class="lab-panneau" hidden>
+      <h3 data-i18n="tournoi_title">Qui gagne sur la durée ?</h3>
+      <p class="lab-sous-titre" data-i18n="tournoi_desc">Les cinq stratégies s'affrontent toutes entre elles, dix tours par duel. Le classement révèle laquelle tient le mieux dans un monde où tout le monde joue.</p>
+      <button type="button" id="btn-tournoi" class="btn-lancer" data-i18n="tournoi_btn">Lancer le tournoi</button>
+      <div class="tournoi-res" id="tournoi-res"></div>
+      <p class="lab-verdict" id="tournoi-note" role="status"></p>
+    </section>
+
+    <section id="p-evolution" class="lab-panneau" hidden>
+      <h3 data-i18n="evo_title">Et si les meilleures se reproduisaient ?</h3>
+      <p class="lab-sous-titre" data-i18n="evo_desc">Vingt-cinq joueurs, cinq de chaque stratégie. À chaque génération, les cinq derniers adoptent la stratégie des cinq premiers. Chaque colonne est une génération.</p>
+      <button type="button" id="btn-evolution" class="btn-lancer" data-i18n="evo_btn">Lancer l'évolution</button>
+      <div class="evo-graphe" id="evo-graphe" aria-hidden="true"></div>
+      <div class="evo-legende">
+        <span><i data-visage="copieur"></i><span data-i18n="strat_copieur">Donnant-donnant</span></span>
+        <span><i data-visage="mouton"></i><span data-i18n="strat_mouton">Coopérateur naïf</span></span>
+        <span><i data-visage="tricheur"></i><span data-i18n="strat_tricheur">Traître systématique</span></span>
+        <span><i data-visage="rancunier"></i><span data-i18n="strat_rancunier">Rancunier</span></span>
+        <span><i data-visage="detective"></i><span data-i18n="strat_detective">Détective</span></span>
+      </div>
+      <p class="lab-verdict" id="evo-note" role="status"></p>
+    </section>
+
+    <label class="lab-bruit">
+      <input type="checkbox" id="bruit" />
+      <span data-i18n="lab_bruit">Ajouter 5 % d'erreurs de communication</span>
+    </label>
+  </div>
+      </div>
+
+      <div class="jeux-liste">
+        <a class="jeu-ext" href="https://ayowel.github.io/trust/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 12 8.5 9.5a2.1 2.1 0 0 0-3 3L10 17l2-1.5L14 17l4.5-4.5a2.1 2.1 0 0 0-3-3L13 12"/><path d="M3 10V7a2 2 0 0 1 2-2h3"/><path d="M21 10V7a2 2 0 0 0-2-2h-3"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_trust_t">L'évolution de la Confiance</strong>
+            <span data-i18n="g_trust_d">La référence sur le dilemme du prisonnier itéré : pourquoi et comment la confiance apparaît, et ce que les erreurs de communication y changent.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://www.apprendre-en-ligne.net/jeux/dilemme/home.html" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_cours_t">Le dilemme du prisonnier, le cours</strong>
+            <span data-i18n="g_cours_d">Un cours complet en français : matrices de gains, équilibre de Nash, tournois d'Axelrod et variantes du dilemme.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="famille" id="fam-ia">
+      <h2 data-i18n="fam_ia_t">Intelligence artificielle et apprentissage</h2>
+      <p class="famille-desc" data-i18n="fam_ia_d">Manipuler un modèle vaut mieux que lire sa définition. Ces trois outils font tourner de vrais réseaux de neurones dans votre navigateur.</p>
+      <div class="jeux-liste">
+        <a class="jeu-ext" href="https://playground.tensorflow.org/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="7" r="2"/><circle cx="19" cy="17" r="2"/><path d="M6.8 7.1 10.2 11M6.8 16.9 10.2 13M13.9 11.1 17.2 8.1M13.9 12.9 17.2 15.9"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_tfp_t">TensorFlow Playground</strong>
+            <span data-i18n="g_tfp_d">Entraînez un réseau de neurones à la main : couches, neurones, fonction d'activation, taux d'apprentissage. On voit la frontière de décision se déformer en direct.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_tm_t">Teachable Machine</strong>
+            <span data-i18n="g_tm_d">Entraînez un modèle de classification avec votre webcam, sans écrire une ligne de code. La meilleure démonstration de ce qu'est un jeu de données d'entraînement.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://quickdraw.withgoogle.com/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_qd_t">Quick, Draw!</strong>
+            <span data-i18n="g_qd_d">Un réseau de neurones devine vos dessins en moins de vingt secondes. Derrière le jeu, le plus grand jeu de données de dessins au monde.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="famille" id="fam-societe">
+      <h2 data-i18n="fam_soc_t">Modèles de société</h2>
+      <p class="famille-desc" data-i18n="fam_soc_d">Des articles jouables qui montrent comment des règles simples produisent des phénomènes collectifs inattendus. Signés Nicky Case, la source du laboratoire ci-dessus.</p>
+      <div class="jeux-liste">
+        <a class="jeu-ext" href="https://ncase.me/polygons-fr/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 20 2 20"/><circle cx="12" cy="14" r="3.2"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_poly_t">La parabole des polygones</strong>
+            <span data-i18n="g_poly_d">Le modèle de ségrégation de Schelling, rendu jouable. De petites préférences individuelles suffisent à produire une société très ségrégée.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://ncase.me/crowds/fr.html" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="18" cy="9" r="2.4"/><path d="M21 21v-1.5a3 3 0 0 0-2.4-2.9"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_crowds_t">La sagesse ou la folie des foules</strong>
+            <span data-i18n="g_crowds_d">Comment la forme d'un réseau social décide de ce qui s'y propage : une idée juste, une rumeur, ou une panique.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://ncase.me/ballot/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_ballot_t">To Build a Better Ballot</strong>
+            <span data-i18n="g_ballot_d">Pourquoi le scrutin majoritaire produit des résultats que personne ne voulait, et ce que donnent les autres modes de scrutin.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://ncase.me/loopy/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_loopy_t">LOOPY</strong>
+            <span data-i18n="g_loopy_d">Un bac à sable pour dessiner des systèmes avec leurs boucles de rétroaction, puis les faire tourner. Utile bien au-delà du jeu.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="famille" id="fam-cognition">
+      <h2 data-i18n="fam_cog_t">Logique et cognition</h2>
+      <p class="famille-desc" data-i18n="fam_cog_d">Les épreuves que l'on retrouve dans les processus de recrutement, et de quoi mesurer ses propres réflexes.</p>
+      <div class="jeux-liste">
+        <a class="jeu-ext" href="https://kwyztek.com/categories/tests-psychotechniques" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 0 7 4.5c-1.4.3-2.5 1.6-2.5 3.1 0 .6.2 1.2.5 1.7-.9.6-1.5 1.6-1.5 2.7 0 1.2.7 2.3 1.7 2.8-.1.3-.2.7-.2 1.1A2.9 2.9 0 0 0 8 18.9c.3 1.2 1.3 2.1 2.6 2.1 1.4 0 2.4-1 2.4-2.4V4.5A2.5 2.5 0 0 0 10.5 2z"/><path d="M14 4.5V18.6c0 1.4 1 2.4 2.4 2.4 1.3 0 2.3-.9 2.6-2.1a2.9 2.9 0 0 0 2-2.9c0-.4-.1-.8-.2-1.1 1-.5 1.7-1.6 1.7-2.8 0-1.1-.6-2.1-1.5-2.7.3-.5.5-1.1.5-1.7 0-1.5-1.1-2.8-2.5-3.1A2.5 2.5 0 0 0 16.5 2z"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_kwy_t">Tests psychotechniques</strong>
+            <span data-i18n="g_kwy_d">Suites logiques, matrices, raisonnement spatial et numérique. Le format exact des tests d'entrée en école et en entreprise.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">FR</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://humanbenchmark.com/" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_hb_t">Human Benchmark</strong>
+            <span data-i18n="g_hb_d">Temps de réaction, mémoire visuelle, empan de chiffres, et votre score comparé à des millions de personnes.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+        <a class="jeu-ext" href="https://www.coolmathgames.com/c/logic-games" target="_blank" rel="noopener noreferrer">
+          <span class="jeu-ext-icone"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3a2 2 0 1 1 4 0h3v3a2 2 0 1 1 0 4v3h-3a2 2 0 1 0-4 0H4v-3a2 2 0 1 0 0-4z"/></svg></span>
+          <span class="jeu-ext-txt">
+            <strong data-i18n="g_cmg_t">Jeux de logique</strong>
+            <span data-i18n="g_cmg_d">Une large collection de casse-têtes de logique pure, du plus simple au franchement retors.</span>
+          </span>
+          <span class="jeu-ext-meta"><span class="jeu-langue">EN</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p data-i18n="footer_main">© 2026 Mohamed Fofana — Clermont-Ferrand, France</p>
+    <p class="footer-sub" data-i18n="footer_sub">Transformer les données en décisions · Ouvert aux stages et alternances en Data Science et IA</p>
+  </footer>
+
+  <script src="chat.js"></script>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+  <script src="jeux.js"></script>
+</body>
+</html>
