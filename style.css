@@ -147,16 +147,11 @@ nav ul a:hover { color: var(--primary); }
 }
 .social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 .avatar-img {
-  /* Portrait 3:4, même cadrage que la photo du CV : le cadre a les proportions de l'image */
-  width: 240px; height: 320px; border-radius: 18px;
+  /* Portrait 3:4 net, exactement comme la photo du CV : angles droits, pas de bordure, pas d'animation */
+  width: 240px; height: 320px; border-radius: 0;
   object-fit: cover;
-  box-shadow: 0 20px 60px rgba(37,99,235,0.3);
-  animation: float 3s ease-in-out infinite;
-  border: 4px solid var(--white);
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  display: block;
+  box-shadow: 0 12px 32px rgba(15,23,42,0.18);
 }
 
 /* ABOUT */
@@ -718,7 +713,7 @@ footer p { font-size: 0.9rem; }
   .hero-desc { margin-left: auto; margin-right: auto; }
   .about-content { grid-template-columns: 1fr; }
   .avatar-img { width: 195px; height: 260px; }
-  .hero-avatar { margin-top: 1.2rem; } /* l'animation float remonte la photo de 15px : marge sous la nav */
+  .hero-avatar { margin-top: 1.2rem; } /* un peu d'air entre la barre de navigation et la photo */
   .momo-container { flex-direction: column; align-items: center; }
   .momo-services { max-width: 100%; width: 100%; }
   .momo-bot { width: 100%; max-width: 400px; }
