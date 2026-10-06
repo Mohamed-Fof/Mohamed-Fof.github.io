@@ -83,3 +83,26 @@ navUl.querySelectorAll('a').forEach(link => {
 document.addEventListener('click', e => {
   if (!e.target.closest('nav') && navUl.style.display === 'flex') closeMenu();
 });
+// Portrait du hero : légère inclinaison 3D qui suit la souris (ordinateur uniquement, mouvement réduit respecté)
+const portrait = document.querySelector('.portrait');
+const hero = document.querySelector('.hero');
+if (portrait && hero &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let raf = 0;
+  hero.addEventListener('pointermove', e => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const r = portrait.getBoundingClientRect();
+      const x = (e.clientX - (r.left + r.width / 2)) / window.innerWidth;
+      const y = (e.clientY - (r.top + r.height / 2)) / window.innerHeight;
+      portrait.style.setProperty('--rx', (x * 12).toFixed(2) + 'deg');
+      portrait.style.setProperty('--ry', (-y * 12).toFixed(2) + 'deg');
+    });
+  });
+  hero.addEventListener('pointerleave', () => {
+    cancelAnimationFrame(raf);
+    portrait.style.setProperty('--rx', '0deg');
+    portrait.style.setProperty('--ry', '0deg');
+  });
+}

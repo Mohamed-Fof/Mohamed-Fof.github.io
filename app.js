@@ -36,7 +36,7 @@ const i18n = {
     hero_hello:'Bonjour, je suis',
     hero_subtitle:'Étudiant en Master 1 Mathématiques Appliquées, Statistique',
     hero_desc:'Passionné par l\'IA, la Data Science et les Statistiques. Je développe des compétences en programmation, en analyse de données et en modélisation statistique pour résoudre des problèmes complexes et prendre des décisions éclairées.',
-    hero_btn_exp:'Voir mes expériences', hero_btn_projects:'Voir mes projets', hero_btn_cv:'Télécharger mon CV',
+    hero_btn_exp:'Voir mes expériences', hero_btn_projects:'Voir mes projets', hero_btn_cv:'Télécharger mon CV', hero_badge:'Stage dès avril 2027', hero_badge_data:'Data Science & IA',
     hero_btn_app:'Voir mon application',
     /* — ABOUT — */
     about_title:'À propos de moi',
@@ -235,7 +235,7 @@ const i18n = {
     hero_hello:'Hello, I am',
     hero_subtitle:'Master 1 in Applied Mathematics & Statistics',
     hero_desc:'Passionate about AI, Data Science and Statistics. I develop skills in programming, data analysis and statistical modelling to solve complex problems and make informed decisions.',
-    hero_btn_exp:'View my experience', hero_btn_projects:'View my projects', hero_btn_cv:'Download my CV',
+    hero_btn_exp:'View my experience', hero_btn_projects:'View my projects', hero_btn_cv:'Download my CV', hero_badge:'Internship from April 2027', hero_badge_data:'Data Science & AI',
     hero_btn_app:'View my app',
     /* — ABOUT — */
     about_title:'About me',
