@@ -312,6 +312,8 @@ nav ul a:hover { color: var(--primary); }
   text-decoration: none; transition: all 0.2s;
 }
 .projet-github:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+/* Expériences : même écart sous les mots-clés que dans les cartes de projets (.projet-actions) */
+.tl-github { margin-top: 1rem; }
 
 /* Projet déployé : mis en avant */
 .projet-featured {
