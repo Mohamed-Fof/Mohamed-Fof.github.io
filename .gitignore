@@ -4,6 +4,8 @@
 *.png
 *.gif
 *.webp
+# … sauf l'image d'aperçu des liens partagés (LinkedIn, WhatsApp…)
+!og-image.jpg
 
 # Fichiers système
 .DS_Store
