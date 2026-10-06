@@ -147,7 +147,8 @@ nav ul a:hover { color: var(--primary); }
 }
 .social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 .avatar-img {
-  width: 250px; height: 250px; border-radius: 50%;
+  /* Portrait 3:4, même cadrage que la photo du CV : le cadre a les proportions de l'image */
+  width: 240px; height: 320px; border-radius: 18px;
   object-fit: cover;
   box-shadow: 0 20px 60px rgba(37,99,235,0.3);
   animation: float 3s ease-in-out infinite;
@@ -716,7 +717,8 @@ footer p { font-size: 0.9rem; }
   .social-links { justify-content: center; }
   .hero-desc { margin-left: auto; margin-right: auto; }
   .about-content { grid-template-columns: 1fr; }
-  .avatar-img { width: 200px; height: 200px; }
+  .avatar-img { width: 195px; height: 260px; }
+  .hero-avatar { margin-top: 1.2rem; } /* l'animation float remonte la photo de 15px : marge sous la nav */
   .momo-container { flex-direction: column; align-items: center; }
   .momo-services { max-width: 100%; width: 100%; }
   .momo-bot { width: 100%; max-width: 400px; }
@@ -740,7 +742,7 @@ footer p { font-size: 0.9rem; }
   .types-grille { grid-template-columns: 1fr; }
   .jeu-ext { flex-wrap: wrap; gap: 0.7rem; }
   .jeu-ext-txt { flex-basis: 100%; order: 3; }
-  .avatar-img { width: 160px; height: 160px; }
+  .avatar-img { width: 165px; height: 220px; }
   .skills-grid { grid-template-columns: 1fr; }
   .projets-grid { grid-template-columns: 1fr; }
   .jeu-lab, .notion { padding: 1.3rem; }
@@ -774,7 +776,7 @@ footer p { font-size: 0.9rem; }
 @media (max-width: 400px) {
   .hero-text h1 { font-size: 1.7rem; }
   .hero-hello { font-size: 0.95rem; }
-  .avatar-img { width: 130px; height: 130px; }
+  .avatar-img { width: 135px; height: 180px; }
   .section-header h2 { font-size: 1.4rem; }
   .tl-content { padding: 1rem; }
   .bot-card { padding: 1.2rem; }
