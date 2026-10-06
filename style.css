@@ -935,3 +935,45 @@ footer p { font-size: 0.9rem; }
   #momo-panneau { right: 10px; left: 10px; width: auto; height: min(70dvh, 520px);
     bottom: calc(78px + env(safe-area-inset-bottom)); }
 }
+
+/* ===== MOTION =====
+   Un seul langage d'animation pour tout le site : apparition en fondu + légère montée,
+   en cascade dans les grilles, micro-réactions au survol, laboratoire animé.
+   Pour revenir en arrière : supprimer ce bloc et le bloc « MOTION » de script.js. */
+.motion .reveal {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.7s cubic-bezier(.2,.7,.2,1);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.motion .reveal.visible { opacity: 1; transform: none; }
+/* Le trait sous chaque titre se dessine à l'arrivée du titre */
+.motion .section-header.reveal .underline { width: 0; transition: width 0.7s cubic-bezier(.2,.7,.2,1) 0.3s; }
+.motion .section-header.reveal.visible .underline { width: 60px; }
+
+/* Survol : les cartes se soulèvent légèrement (projets et liens de jeux l'avaient déjà) */
+.skill-category, .tl-content, .momo-item, .type-jeu { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.skill-category:hover, .tl-content:hover, .momo-item:hover, .type-jeu:hover {
+  transform: translateY(-4px); box-shadow: 0 12px 28px -10px rgba(37,99,235,0.28);
+}
+
+/* Laboratoire : dernier coup du duel, scores, classement du tournoi, courbe d'évolution */
+#histo .histo-tour:last-child { animation: apparait 0.35s ease; }
+.rebond { display: inline-block; animation: rebond 0.4s cubic-bezier(.3,1.6,.5,1); }
+@keyframes rebond { 40% { transform: scale(1.35); color: var(--primary); } }
+.rang { animation: rang-entree 0.45s ease backwards; }
+.rang .rang-barre span { animation: barre-pousse 0.9s cubic-bezier(.2,.7,.2,1) backwards; }
+.rang:nth-child(2), .rang:nth-child(2) .rang-barre span { animation-delay: 0.08s; }
+.rang:nth-child(3), .rang:nth-child(3) .rang-barre span { animation-delay: 0.16s; }
+.rang:nth-child(4), .rang:nth-child(4) .rang-barre span { animation-delay: 0.24s; }
+.rang:nth-child(5), .rang:nth-child(5) .rang-barre span { animation-delay: 0.32s; }
+.rang:nth-child(n+6), .rang:nth-child(n+6) .rang-barre span { animation-delay: 0.4s; }
+@keyframes rang-entree { from { opacity: 0; transform: translateX(-14px); } }
+@keyframes barre-pousse { from { width: 0; } }
+.evo-graphe.trace { animation: evo-trace 1.2s cubic-bezier(.4,0,.2,1); }
+@keyframes evo-trace { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-category, .tl-content, .momo-item, .type-jeu { transition: none; }
+  .skill-category:hover, .tl-content:hover, .momo-item:hover, .type-jeu:hover { transform: none; }
+  #histo .histo-tour:last-child, .rebond, .rang, .rang .rang-barre span, .evo-graphe.trace { animation: none; }
+}

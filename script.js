@@ -27,22 +27,51 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.skill-category').forEach(el => observer.observe(el));
 
-// Animate elements on scroll
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
+// ===== MOTION : un seul système d'animation pour tout le site =====
+// Pour revenir en arrière : supprimer ce bloc et le bloc « MOTION » de style.css.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
 
-document.querySelectorAll('.projet-card, .tl-content, .skill-category, .contact-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s, transform 0.5s';
-  fadeObserver.observe(el);
-});
+  // 1. Apparition au défilement : fondu + légère montée, en cascade dans une même grille
+  const CIBLES = [
+    '.section-header', '.about-text > *', '.about-passion', '.timeline-item', '.projet-card', '.skill-category',
+    '.momo-item', '.momo-bot',
+    '.famille > :not(.types-grille):not(.jeux-liste)', '.type-jeu', '.jeu-ext', '.notion', '.jeu-lab'
+  ].join(',');
+  // Un élément déjà contenu dans un bloc animé ne s'anime pas une seconde fois
+  const els = [...document.querySelectorAll(CIBLES)].filter(el => !el.parentElement.closest(CIBLES));
+  if (!els.length) return;
+  document.documentElement.classList.add('motion');
+  els.forEach(el => {
+    const freres = [...el.parentElement.children].filter(c => els.includes(c));
+    el.style.setProperty('--i', Math.min(freres.indexOf(el), 6));
+    el.classList.add('reveal');
+  });
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    io.unobserve(el);
+    el.classList.add('visible');
+    // Une fois arrivé, on rend l'élément à son style normal (ses effets de survol fonctionnent à nouveau)
+    const fin = ev => {
+      if (ev.target !== el || ev.propertyName !== 'transform') return;
+      el.removeEventListener('transitionend', fin);
+      el.classList.remove('reveal', 'visible');
+      el.style.removeProperty('--i');
+    };
+    el.addEventListener('transitionend', fin);
+  }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+
+  // 2. Laboratoire (Jeux & Société) : les scores rebondissent, la courbe d'évolution se trace
+  const rejouer = (el, cls) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
+  ['score-moi', 'score-adv'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) new MutationObserver(() => rejouer(el, 'rebond')).observe(el, { childList: true, characterData: true, subtree: true });
+  });
+  const graphe = document.getElementById('evo-graphe');
+  if (graphe) new MutationObserver(() => { if (graphe.children.length) rejouer(graphe, 'trace'); }).observe(graphe, { childList: true });
+})();
 
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
