@@ -108,6 +108,16 @@ nav ul a:hover { color: var(--primary); }
   padding: 8rem 6% 4rem;
   background: var(--hero-bg);
 }
+/* Pastille de disponibilité au-dessus du titre */
+.hero-dispo {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.9rem; margin-bottom: 1rem; border-radius: 999px;
+  background: var(--card-bg); border: 1px solid var(--border);
+  color: var(--text); font-size: 0.85rem; font-weight: 600;
+  box-shadow: 0 6px 18px -8px rgba(15,23,42,0.2);
+  animation: dispo-entree 0.6s ease 0.2s backwards;
+}
+@keyframes dispo-entree { from { opacity: 0; transform: translateY(-8px); } }
 .hero-hello { color: var(--primary); font-weight: 600; font-size: 1.1rem; }
 .hero-text h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin: 0.3rem 0; }
 .hero-text h1 span { color: var(--primary); }
@@ -148,8 +158,8 @@ nav ul a:hover { color: var(--primary); }
 .social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 /* ===== PORTRAIT DU HERO =====
    Photo 3:4 cadrée comme sur le CV, posée sur un cadre décalé en dégradé (bleu -> violet du site),
-   une trame de points « data » et un halo. Motion : dévoilement, glissement du cadre, étiquettes
-   qui apparaissent puis flottent, inclinaison 3D qui suit la souris (script.js). */
+   une trame de points « data » et un halo. Motion : dévoilement, glissement du cadre,
+   inclinaison 3D qui suit la souris (script.js). Aucun texte sur la photo. */
 .hero-avatar { flex-shrink: 0; margin-right: 2.5rem; }
 .portrait {
   --w: 280px;
@@ -184,25 +194,6 @@ nav ul a:hover { color: var(--primary); }
   filter: blur(28px);
   animation: portrait-respire 7s ease-in-out infinite alternate;
 }
-.portrait-badge {
-  position: absolute; z-index: 3;
-  display: inline-flex; align-items: center; gap: 0.45rem;
-  padding: 0.5rem 0.85rem; border-radius: 999px;
-  background: var(--card-bg); color: var(--text);
-  border: 1px solid var(--border);
-  font-size: 0.8rem; font-weight: 600; white-space: nowrap;
-  box-shadow: 0 10px 25px -8px rgba(15,23,42,0.25);
-  animation:
-    portrait-badge 0.6s cubic-bezier(.2,.9,.3,1.3) backwards,
-    portrait-flotte 5s ease-in-out infinite;
-}
-.badge-data  { top: 9%;    left: -58px;  animation-delay: 1.1s, 1.7s; }
-.badge-stage { top: 47%;   right: -66px; animation-delay: 1.3s, 2.6s; }
-.badge-stack { bottom: 7%; left: -44px;  animation-delay: 1.5s, 3.4s; }
-.badge-ico {
-  width: 9px; height: 9px; border-radius: 2px;
-  background: linear-gradient(135deg, var(--primary), #7c3aed);
-}
 .badge-dot {
   width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
   box-shadow: 0 0 0 0 rgba(34,197,94,0.6);
@@ -212,11 +203,9 @@ nav ul a:hover { color: var(--primary); }
 @keyframes portrait-cadre   { from { transform: translate(0, 0); opacity: 0; } to { transform: translate(18px, 18px); opacity: 1; } }
 @keyframes portrait-fondu   { from { opacity: 0; } }
 @keyframes portrait-respire { from { transform: scale(0.95); opacity: 0.8; } to { transform: scale(1.08); opacity: 1; } }
-@keyframes portrait-badge   { from { opacity: 0; scale: 0.6; } to { opacity: 1; scale: 1; } }
-@keyframes portrait-flotte  { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
 @keyframes portrait-pulse   { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.55); } 100% { box-shadow: 0 0 0 9px rgba(34,197,94,0); } }
 @media (prefers-reduced-motion: reduce) {
-  .portrait, .portrait *, .portrait-badge, .badge-dot { animation: none !important; transition: none !important; }
+  .portrait, .portrait *, .badge-dot, .hero-dispo { animation: none !important; transition: none !important; }
 }
 
 /* ABOUT */
@@ -779,7 +768,6 @@ footer p { font-size: 0.9rem; }
   .about-content { grid-template-columns: 1fr; }
   .hero-avatar { margin: 1.2rem 0 0; } /* un peu d'air entre la barre de navigation et la photo */
   .portrait { --w: 210px; }
-  .badge-data { top: -5%; }
   .hero { overflow: hidden; } /* les étiquettes débordent du portrait : jamais de défilement horizontal */
   .momo-container { flex-direction: column; align-items: center; }
   .momo-services { max-width: 100%; width: 100%; }
@@ -805,9 +793,6 @@ footer p { font-size: 0.9rem; }
   .jeu-ext { flex-wrap: wrap; gap: 0.7rem; }
   .jeu-ext-txt { flex-basis: 100%; order: 3; }
   .portrait { --w: 180px; }
-  .portrait-badge { font-size: 0.7rem; padding: 0.4rem 0.7rem; }
-  .badge-data { top: -5%; left: -40px; } /* au-dessus de la photo : ne masque pas le visage */
-  .badge-stage { right: -52px; } .badge-stack { left: -34px; }
   .skills-grid { grid-template-columns: 1fr; }
   .projets-grid { grid-template-columns: 1fr; }
   .jeu-lab, .notion { padding: 1.3rem; }
