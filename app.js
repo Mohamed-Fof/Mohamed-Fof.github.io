@@ -428,7 +428,8 @@ const i18n = {
   }
 };
 
-let currentLang = localStorage.getItem('lang') || 'fr';
+// Liste blanche : une valeur inattendue dans localStorage ne doit pas casser les traductions
+let currentLang = localStorage.getItem('lang') === 'en' ? 'en' : 'fr';
 
 function applyLang(lang) {
   const dict = i18n[lang];
