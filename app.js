@@ -161,10 +161,10 @@ const i18n = {
     exp4_li3:'Développement d\'un agent IA conversationnel (Momo) pour automatiser le premier contact client',
     /* — PROJETS — */
     projets_title:'Projets Académiques',
-    proj1_domain:'Machine Learning', proj1_title:'Risque de Défaut de Crédit',
+    proj1_domain:'Machine Learning', proj1_title:'Scoring de Risque de Crédit',
     proj1_live:'Application en ligne', proj1_demo:'Ouvrir l\'application', proj_code:'Code source',
     proj1_cold:'Hébergement gratuit : le premier chargement peut prendre ~1 min.',
-    proj1_desc:'Classification binaire pour estimer la probabilité de défaut. Analyse de données, évaluation de performances et interprétation des résultats pour aide à la décision.',
+    proj1_desc:'Six modèles comparés sur 32 409 prêts. Modèle retenu : XGBoost avec contraintes de cohérence (AUC 0,92 contre 0,86 en version initiale), aux côtés d\'une grille de score bancaire. Chaque décision est expliquée par les valeurs de Shapley ; application sécurisée, testée et déployée avec Docker.', proj1_guide:'Guide du projet',
     proj2_domain:'Économétrie', proj2_title:'Déterminants des Prix Immobiliers',
     proj2_desc:'Analyse exploratoire, estimation OLS et validation des hypothèses économétriques (hétéroscédasticité, autocorrélation), puis prédiction des prix par apprentissage automatique et comparaison des modèles.',
     proj3_domain:'Informatique', proj3_title:'Programmation Logique – Jeu "Flaunt" (Hofstadter)',
@@ -219,7 +219,7 @@ const i18n = {
     exp_tags_ageis:'<span>Python</span><span>R</span><span>Machine Learning</span><span>Économétrie</span><span>Santé publique</span>',
     exp_tags_founder:'<span>Entrepreneuriat</span><span>Consulting</span><span>IA</span><span>Accompagnement</span>',
     /* — PROJET tags — */
-    proj_tags_1:'<span>R</span><span>RStudio</span><span>R Shiny Dashboard</span><span>ML Supervisé</span><span>Classification</span><span>Risk Credit</span><span>Finance</span>',
+    proj_tags_1:'<span>R</span><span>XGBoost</span><span>Grille de score</span><span>Valeurs de Shapley</span><span>Shiny</span><span>Docker</span><span>Risque de crédit</span>',
     proj_tags_2:'<span>Python</span><span>Gretl</span><span>Analyse exploratoire</span><span>Régression OLS</span><span>Diagnostics économétriques</span><span>Machine Learning</span><span>Feature engineering</span><span>Validation croisée</span><span>Random Forest</span><span>RMSE / R²</span>',
     proj_tags_3:'<span>SWI Prolog</span><span>IA</span><span>Logique</span><span>Stratégie</span>',
     proj_tags_4:'<span>LaTeX</span><span>Moodle</span><span>Éco. Expérimentale</span>',
@@ -360,10 +360,10 @@ const i18n = {
     exp4_li3:'Developed an AI chatbot (Momo) to automate initial client onboarding',
     /* — PROJETS — */
     projets_title:'Academic Projects',
-    proj1_domain:'Machine Learning', proj1_title:'Credit Default Risk',
+    proj1_domain:'Machine Learning', proj1_title:'Credit Risk Scoring',
     proj1_live:'Live app', proj1_demo:'Open the app', proj_code:'Source code',
     proj1_cold:'Free hosting: the first load may take ~1 min.',
-    proj1_desc:'Binary classification to estimate default probability. Data analysis, performance evaluation and result interpretation for decision-making.',
+    proj1_desc:'Six models compared on 32,409 loans. Selected model: XGBoost with consistency constraints (AUC 0.92 vs 0.86 initially), alongside a banking scorecard. Every decision is explained with Shapley values; secure, tested app deployed with Docker.', proj1_guide:'Project guide',
     proj2_domain:'Econometrics', proj2_title:'Determinants of Housing Prices',
     proj2_desc:'Exploratory analysis, OLS estimation and validation of econometric assumptions (heteroskedasticity, autocorrelation), then house price prediction with machine learning and model comparison.',
     proj3_domain:'Computer Science', proj3_title:'Logic Programming – "Flaunt" Game (Hofstadter)',
@@ -418,7 +418,7 @@ const i18n = {
     exp_tags_ageis:'<span>Python</span><span>R</span><span>Machine Learning</span><span>Econometrics</span><span>Public Health</span>',
     exp_tags_founder:'<span>Entrepreneurship</span><span>Consulting</span><span>AI</span><span>Student Support</span>',
     /* — PROJET tags — */
-    proj_tags_1:'<span>R</span><span>RStudio</span><span>R Shiny Dashboard</span><span>Supervised ML</span><span>Classification</span><span>Credit Risk</span><span>Finance</span>',
+    proj_tags_1:'<span>R</span><span>XGBoost</span><span>Credit scorecard</span><span>SHAP values</span><span>Shiny</span><span>Docker</span><span>Credit risk</span>',
     proj_tags_2:'<span>Python</span><span>Gretl</span><span>Exploratory Analysis</span><span>OLS Regression</span><span>Econometric Diagnostics</span><span>Machine Learning</span><span>Feature Engineering</span><span>Cross-validation</span><span>Random Forest</span><span>RMSE / R²</span>',
     proj_tags_3:'<span>SWI Prolog</span><span>AI</span><span>Logic</span><span>Strategy</span>',
     proj_tags_4:'<span>LaTeX</span><span>Moodle</span><span>Exp. Economics</span>',
