@@ -135,3 +135,17 @@ if (portrait && hero &&
     portrait.style.setProperty('--ry', '0deg');
   });
 }
+
+// Réveil anticipé de l'application de scoring : son hébergement gratuit (Render) la met en veille
+// après 15 minutes sans visite, et le réveil prend près d'une minute. Dès qu'un visiteur ouvre le
+// portfolio, on la contacte en arrière-plan : elle est prête quand il clique sur « Voir mon
+// application ». Une seule fois par visite, sans cookie ni donnée transmise.
+(function () {
+  try {
+    if (sessionStorage.getItem('reveil-scoring')) return;
+    sessionStorage.setItem('reveil-scoring', '1');
+  } catch (e) { /* stockage indisponible : on réveille quand même */ }
+  if (!window.fetch) return;
+  fetch('https://credit-risk-app-c8ye.onrender.com/', { mode: 'no-cors', cache: 'no-store', credentials: 'omit' })
+    .catch(function () { /* hors ligne ou bloqué : sans conséquence pour le portfolio */ });
+})();
