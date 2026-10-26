@@ -8,10 +8,10 @@ Portfolio personnel déployé sur GitHub Pages.
 
 ## Contenu
 
-- Présentation personnelle et formation (UGA — MIASHS Économie)
+- Présentation personnelle et formation (Master Mathématiques Appliquées, Statistique — Université Clermont Auvergne ; Licence MIASHS — Université Grenoble Alpes)
 - Expériences professionnelles (stages AGEIS, GAEL, tutorat)
-- Projets académiques (Machine Learning, Économétrie, Prolog...)
-- Compétences (Python, R, MATLAB, SQL...)
+- Projets (scoring de risque de crédit, système SQL de risque de crédit, économétrie, Prolog...)
+- Compétences (Python, R, SQL / PostgreSQL, MATLAB...)
 - Section **MF Consulting** avec chatbot IA (Momo)
 
 ## Stack technique
