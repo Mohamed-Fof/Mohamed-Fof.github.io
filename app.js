@@ -167,6 +167,8 @@ const i18n = {
     proj1_desc:'Six modèles comparés sur 32 409 prêts. Modèle retenu : XGBoost avec contraintes de cohérence (AUC 0,92 contre 0,86 en version initiale), aux côtés d\'une grille de score bancaire. Chaque décision est expliquée par les valeurs de Shapley ; application sécurisée, testée et déployée avec Docker.', proj1_guide:'Guide du projet',
     proj2_domain:'Économétrie', proj2_title:'Déterminants des Prix Immobiliers',
     proj2_desc:'Analyse exploratoire, estimation OLS et validation des hypothèses économétriques (hétéroscédasticité, autocorrélation), puis prédiction des prix par apprentissage automatique et comparaison des modèles.',
+    proj5_domain:'Data Engineering · SQL', proj5_title:'Système SQL de Risque de Crédit',
+    proj5_desc:'Prolongement du projet de scoring : une base PostgreSQL de 1,3 million de lignes suit 32 409 prêts de la demande au défaut. Retards de paiement, provisions IFRS 9 et registre des prédictions des modèles ; le défaut est détecté automatiquement par triggers et procédures stockées, sans aucun écart avec la réalité sur 7 088 défauts.',
     proj3_domain:'Informatique', proj3_title:'Programmation Logique – Jeu "Flaunt" (Hofstadter)',
     proj3_desc:'Conception d\'un agent stratégique adaptatif basé sur la logique et l\'analyse du comportement adverse pour un tournoi inter-cohortes.',
     proj4_domain:'Micro-Économie', proj4_title:'L\'Économie est-elle une Science Expérimentale ?',
@@ -220,6 +222,7 @@ const i18n = {
     exp_tags_founder:'<span>Entrepreneuriat</span><span>Consulting</span><span>IA</span><span>Accompagnement</span>',
     /* — PROJET tags — */
     proj_tags_1:'<span>R</span><span>XGBoost</span><span>Grille de score</span><span>Valeurs de Shapley</span><span>Shiny</span><span>Docker</span><span>Risque de crédit</span>',
+    proj_tags_5:'<span>PostgreSQL</span><span>PL/pgSQL</span><span>CTE</span><span>Fonctions de fenêtre</span><span>Triggers</span><span>IFRS 9</span><span>Python</span><span>SQLAlchemy</span><span>MLOps</span>',
     proj_tags_2:'<span>Python</span><span>Gretl</span><span>Analyse exploratoire</span><span>Régression OLS</span><span>Diagnostics économétriques</span><span>Machine Learning</span><span>Feature engineering</span><span>Validation croisée</span><span>Random Forest</span><span>RMSE / R²</span>',
     proj_tags_3:'<span>SWI Prolog</span><span>IA</span><span>Logique</span><span>Stratégie</span>',
     proj_tags_4:'<span>LaTeX</span><span>Moodle</span><span>Éco. Expérimentale</span>',
@@ -366,6 +369,8 @@ const i18n = {
     proj1_desc:'Six models compared on 32,409 loans. Selected model: XGBoost with consistency constraints (AUC 0.92 vs 0.86 initially), alongside a banking scorecard. Every decision is explained with Shapley values; secure, tested app deployed with Docker.', proj1_guide:'Project guide',
     proj2_domain:'Econometrics', proj2_title:'Determinants of Housing Prices',
     proj2_desc:'Exploratory analysis, OLS estimation and validation of econometric assumptions (heteroskedasticity, autocorrelation), then house price prediction with machine learning and model comparison.',
+    proj5_domain:'Data Engineering · SQL', proj5_title:'Credit Risk SQL System',
+    proj5_desc:'Follow-up to the scoring project: a 1.3-million-row PostgreSQL database tracks 32,409 loans from application to default. Days past due, IFRS 9 provisions and a registry of model predictions; defaults are detected automatically by triggers and stored procedures, with zero mismatch against reality on 7,088 defaults.',
     proj3_domain:'Computer Science', proj3_title:'Logic Programming – "Flaunt" Game (Hofstadter)',
     proj3_desc:'Design of an adaptive strategic agent based on logic and analysis of opponent behaviour for an inter-cohort tournament.',
     proj4_domain:'Microeconomics', proj4_title:'Is Economics an Experimental Science?',
@@ -419,6 +424,7 @@ const i18n = {
     exp_tags_founder:'<span>Entrepreneurship</span><span>Consulting</span><span>AI</span><span>Student Support</span>',
     /* — PROJET tags — */
     proj_tags_1:'<span>R</span><span>XGBoost</span><span>Credit scorecard</span><span>SHAP values</span><span>Shiny</span><span>Docker</span><span>Credit risk</span>',
+    proj_tags_5:'<span>PostgreSQL</span><span>PL/pgSQL</span><span>CTEs</span><span>Window functions</span><span>Triggers</span><span>IFRS 9</span><span>Python</span><span>SQLAlchemy</span><span>MLOps</span>',
     proj_tags_2:'<span>Python</span><span>Gretl</span><span>Exploratory Analysis</span><span>OLS Regression</span><span>Econometric Diagnostics</span><span>Machine Learning</span><span>Feature Engineering</span><span>Cross-validation</span><span>Random Forest</span><span>RMSE / R²</span>',
     proj_tags_3:'<span>SWI Prolog</span><span>AI</span><span>Logic</span><span>Strategy</span>',
     proj_tags_4:'<span>LaTeX</span><span>Moodle</span><span>Exp. Economics</span>',
