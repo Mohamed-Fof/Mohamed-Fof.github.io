@@ -8,11 +8,27 @@ Portfolio personnel déployé sur GitHub Pages.
 
 ## Contenu
 
-- Présentation personnelle et formation (Master Mathématiques Appliquées, Statistique — Université Clermont Auvergne ; Licence MIASHS — Université Grenoble Alpes)
-- Expériences professionnelles (stages AGEIS, GAEL, tutorat)
-- Projets (scoring de risque de crédit, Olist Analytics (pipeline de données et dashboard e-commerce), économétrie, Prolog...)
-- Compétences (Python, R, SQL / PostgreSQL, MATLAB...)
-- Section **MF Consulting** avec chatbot IA (Momo)
+- **Accueil** : présentation, disponibilité, chiffres clés
+- **Projets** : scoring de risque de crédit et Olist Analytics (études de cas avec graphiques), puis autres projets
+- **Parcours** : expérience, formation et distinction
+- **Compétences**, bandeau **MF Consulting** (agent Momo) et **Contact**
+- Page **Jeux & Société** : laboratoire interactif de théorie des jeux
+
+## Fichiers
+
+| Fichier | Rôle |
+|---|---|
+| `index.html`, `site.css`, `site.js` | page d'accueil, son style et ses animations |
+| `init.js` | thème et état initial, chargé avant l'affichage |
+| `app.js` | traductions FR / EN et bascule de thème (partagé avec `jeux.html`) |
+| `chat.js` | widget de l'agent Momo |
+| `jeux.html`, `jeux.js`, `style.css`, `script.js` | page Jeux & Société |
+
+## Sécurité
+
+- Politique CSP stricte déclarée dans la page : aucun script ni style en ligne, connexions limitées au backend de Momo et à l'application de scoring
+- Liens externes en `noopener noreferrer`, politique de référent `strict-origin-when-cross-origin`
+- Les réponses du chatbot sont échappées avant affichage
 
 ## Stack technique
 

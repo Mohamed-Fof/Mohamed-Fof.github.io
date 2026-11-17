@@ -7,6 +7,8 @@
 # … sauf l'image d'aperçu des liens partagés (LinkedIn, WhatsApp…)
 !og-image.jpg
 !og-jeux.jpg
+# … et le portrait de la page d'accueil (déjà public, auparavant intégré au HTML)
+!portrait.jpg
 
 # Fichiers système
 .DS_Store
