@@ -10,7 +10,7 @@ Portfolio personnel déployé sur GitHub Pages.
 
 - Présentation personnelle et formation (Master Mathématiques Appliquées, Statistique — Université Clermont Auvergne ; Licence MIASHS — Université Grenoble Alpes)
 - Expériences professionnelles (stages AGEIS, GAEL, tutorat)
-- Projets (scoring de risque de crédit, système SQL de risque de crédit, économétrie, Prolog...)
+- Projets (scoring de risque de crédit, Olist Analytics (pipeline de données et dashboard e-commerce), économétrie, Prolog...)
 - Compétences (Python, R, SQL / PostgreSQL, MATLAB...)
 - Section **MF Consulting** avec chatbot IA (Momo)
 
