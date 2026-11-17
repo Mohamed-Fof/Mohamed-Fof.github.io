@@ -130,7 +130,7 @@ const i18n = {
     comp_appro:'En approfondissement',
     comp_data:'Données & bases de données',
     comp_methode:'Communication & méthode',
-    skills_ia:'<span>Machine Learning supervisé</span><span>Classification</span><span>Régression logistique</span><span>Naive Bayes</span><span>Modélisation prédictive</span><span>Data Mining</span><span>Analyse de données</span><span>Algorithmes stochastiques</span><span>Agents conversationnels (LLM)</span><span>API IA</span>',
+    skills_ia:'<span>Apprentissage supervisé</span><span>Apprentissage non supervisé</span><span>ACP</span><span>AFC / ACM</span><span>Clustering (k-means, CAH)</span><span>Classification</span><span>Régression logistique</span><span>XGBoost</span><span>Naive Bayes</span><span>Modélisation prédictive</span><span>Data Mining</span><span>Algorithmes stochastiques</span><span>Agents conversationnels (LLM)</span><span>API IA</span>',
     skills_stats:'<span>Probabilités</span><span>Statistiques bayésiennes</span><span>Inférence statistique</span><span>Tests statistiques</span><span>Régression OLS</span><span>Diagnostics économétriques</span><span>Séries temporelles</span><span>Données de panel</span><span>Processus stochastiques</span><span>Chaînes de Markov</span><span>Simulation Monte Carlo</span>',
     skills_eco:'<span>Théorie des jeux</span><span>Équilibre de Nash</span><span>Jeux répétés</span><span>Économie industrielle</span><span>Économie expérimentale</span><span>Économie de la santé</span><span>Économie de l\'énergie</span><span>Théorie des portefeuilles</span><span>Gestion du risque</span><span>Recherche opérationnelle</span><span>Optimisation</span>',
     skills_tools:'<span>Git / GitHub</span><span>Docker</span><span>R Shiny</span><span>Render</span><span>Vercel</span><span>Linux / UNIX</span><span>LaTeX</span><span>Gretl</span><span>SWI Prolog</span><span>VS Code</span><span>Shell</span>',
@@ -160,7 +160,7 @@ const i18n = {
     exp4_li2:'Suivi de dossiers, préparation aux entretiens Campus France et accompagnement visa',
     exp4_li3:'Développement d\'un agent IA conversationnel (Momo) pour automatiser le premier contact client',
     /* — PROJETS — */
-    projets_title:'Projets Académiques',
+    projets_title:'Projets',
     proj1_domain:'Machine Learning', proj1_title:'Scoring de Risque de Crédit',
     proj1_live:'Application en ligne', proj1_demo:'Ouvrir l\'application', proj_code:'Code source',
     proj1_cold:'Hébergement gratuit : le premier chargement peut prendre ~1 min.',
@@ -168,8 +168,10 @@ const i18n = {
     proj2_domain:'Économétrie', proj2_title:'Déterminants des Prix Immobiliers',
     proj2_desc:'Analyse exploratoire, estimation OLS et validation des hypothèses économétriques (hétéroscédasticité, autocorrélation), puis prédiction des prix par apprentissage automatique et comparaison des modèles.',
     proj5_domain:'Data Analyst · SQL', proj5_title:'Olist Analytics : Pipeline de Données et Dashboards E-commerce',
+    proj1_k1:'prêts analysés', proj1_k2:'AUC du modèle retenu', proj1_k3:'modèles comparés',
+    proj5_k1:'commandes réelles', proj5_k2:'contrôles qualité testés', proj5_k3:'de mauvaises notes après 4 jours de retard',
     proj5_live:'Dashboard en ligne', proj5_demo:'Ouvrir le dashboard',
-    proj5_desc:'Projet de bout en bout sur près de 100 000 commandes réelles d\'Olist, mené sur 4 mois en 2026 : pipeline ELT de 9 fichiers CSV vers un entrepôt PostgreSQL en étoile, indicateurs métier en SQL avancé (fonctions de fenêtre, RFM, cohortes), 14 contrôles qualité testés en intégration continue, puis un dashboard Streamlit déployé et un rapport Power BI (Power Query, mesures DAX) pour le directeur e-commerce. Principal constat : au-delà de 4 jours de retard de livraison, la part de mauvaises notes passe de 9 % à plus de 60 %.',
+    proj5_desc:'Projet de bout en bout mené sur 4 mois à partir des données réelles d\'Olist : pipeline ELT de 9 fichiers CSV vers un entrepôt PostgreSQL en étoile, indicateurs métier en SQL avancé (fonctions de fenêtre, RFM, cohortes), contrôles qualité en intégration continue, puis un dashboard Streamlit déployé et un rapport Power BI (Power Query, mesures DAX) pour le directeur e-commerce.',
     proj3_domain:'Informatique', proj3_title:'Programmation Logique – Jeu "Flaunt" (Hofstadter)',
     proj3_desc:'Conception d\'un agent stratégique adaptatif basé sur la logique et l\'analyse du comportement adverse pour un tournoi inter-cohortes.',
     proj4_domain:'Micro-Économie', proj4_title:'L\'Économie est-elle une Science Expérimentale ?',
@@ -333,7 +335,7 @@ const i18n = {
     comp_appro:'Currently deepening',
     comp_data:'Data & Databases',
     comp_methode:'Communication & Method',
-    skills_ia:'<span>Supervised Machine Learning</span><span>Classification</span><span>Logistic Regression</span><span>Naive Bayes</span><span>Predictive Modelling</span><span>Data Mining</span><span>Data Analysis</span><span>Stochastic Algorithms</span><span>Conversational Agents (LLM)</span><span>AI APIs</span>',
+    skills_ia:'<span>Supervised Learning</span><span>Unsupervised Learning</span><span>PCA</span><span>CA / MCA</span><span>Clustering (k-means, HAC)</span><span>Classification</span><span>Logistic Regression</span><span>XGBoost</span><span>Naive Bayes</span><span>Predictive Modelling</span><span>Data Mining</span><span>Stochastic Algorithms</span><span>Conversational Agents (LLM)</span><span>AI APIs</span>',
     skills_stats:'<span>Probability</span><span>Bayesian Statistics</span><span>Statistical Inference</span><span>Statistical Testing</span><span>OLS Regression</span><span>Econometric Diagnostics</span><span>Time Series</span><span>Panel Data</span><span>Stochastic Processes</span><span>Markov Chains</span><span>Monte Carlo Simulation</span>',
     skills_eco:'<span>Game Theory</span><span>Nash Equilibrium</span><span>Repeated Games</span><span>Industrial Organisation</span><span>Experimental Economics</span><span>Health Economics</span><span>Energy Economics</span><span>Portfolio Theory</span><span>Risk Management</span><span>Operations Research</span><span>Optimisation</span>',
     skills_tools:'<span>Git / GitHub</span><span>Docker</span><span>R Shiny</span><span>Render</span><span>Vercel</span><span>Linux / UNIX</span><span>LaTeX</span><span>Gretl</span><span>SWI Prolog</span><span>VS Code</span><span>Shell</span>',
@@ -363,7 +365,7 @@ const i18n = {
     exp4_li2:'Application file support, Campus France interview coaching and visa guidance',
     exp4_li3:'Developed an AI chatbot (Momo) to automate initial client onboarding',
     /* — PROJETS — */
-    projets_title:'Academic Projects',
+    projets_title:'Projects',
     proj1_domain:'Machine Learning', proj1_title:'Credit Risk Scoring',
     proj1_live:'Live app', proj1_demo:'Open the app', proj_code:'Source code',
     proj1_cold:'Free hosting: the first load may take ~1 min.',
@@ -371,8 +373,10 @@ const i18n = {
     proj2_domain:'Econometrics', proj2_title:'Determinants of Housing Prices',
     proj2_desc:'Exploratory analysis, OLS estimation and validation of econometric assumptions (heteroskedasticity, autocorrelation), then house price prediction with machine learning and model comparison.',
     proj5_domain:'Data Analyst · SQL', proj5_title:'Olist Analytics: Data Pipeline and E-commerce Dashboards',
+    proj1_k1:'loans analysed', proj1_k2:'AUC of the selected model', proj1_k3:'models compared',
+    proj5_k1:'real orders', proj5_k2:'tested quality checks', proj5_k3:'bad reviews after 4 days of delay',
     proj5_live:'Live dashboard', proj5_demo:'Open the dashboard',
-    proj5_desc:'End-to-end project on nearly 100,000 real Olist orders, carried out over 4 months in 2026: an ELT pipeline from 9 CSV files to a PostgreSQL star-schema warehouse, business KPIs in advanced SQL (window functions, RFM, cohorts), 14 data-quality checks tested in continuous integration, then a deployed Streamlit dashboard and a Power BI report (Power Query, DAX measures) for the e-commerce director. Key finding: beyond 4 days of delivery delay, the share of bad reviews rises from 9% to over 60%.',
+    proj5_desc:'End-to-end project carried out over 4 months on real Olist data: an ELT pipeline from 9 CSV files to a PostgreSQL star-schema warehouse, business KPIs in advanced SQL (window functions, RFM, cohorts), data-quality checks in continuous integration, then a deployed Streamlit dashboard and a Power BI report (Power Query, DAX measures) for the e-commerce director.',
     proj3_domain:'Computer Science', proj3_title:'Logic Programming – "Flaunt" Game (Hofstadter)',
     proj3_desc:'Design of an adaptive strategic agent based on logic and analysis of opponent behaviour for an inter-cohort tournament.',
     proj4_domain:'Microeconomics', proj4_title:'Is Economics an Experimental Science?',
@@ -451,6 +455,10 @@ function applyLang(lang) {
   });
   document.getElementById('lang-label').textContent = lang === 'fr' ? 'EN' : 'FR';
   document.documentElement.lang = lang;
+  document.querySelectorAll('.chiffre[data-val]').forEach(el => {
+    const dec = +el.dataset.dec;
+    el.textContent = (+el.dataset.val).toLocaleString(lang === 'en' ? 'en-US' : 'fr-FR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  });
 }
 
 function toggleLang() {

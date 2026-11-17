@@ -241,7 +241,7 @@
   <!-- PROJETS -->
   <section id="projets" class="projets">
     <div class="section-header">
-      <h2 data-i18n="projets_title">Projets Académiques</h2>
+      <h2 data-i18n="projets_title">Projets</h2>
       <div class="underline"></div>
     </div>
     <div class="projets-grid">
@@ -257,6 +257,11 @@
           <span class="projet-niveau">L3-S6</span>
         </div>
         <p data-i18n="proj1_desc">Six modèles comparés sur 32 409 prêts. Modèle retenu : XGBoost avec contraintes de cohérence (AUC 0,92 contre 0,86 en version initiale), aux côtés d'une grille de score bancaire. Chaque décision est expliquée par les valeurs de Shapley ; application sécurisée, testée et déployée avec Docker.</p>
+        <div class="projet-chiffres">
+          <div class="projet-chiffre"><strong><span class="chiffre" data-val="32409" data-dec="0">32 409</span></strong><span data-i18n="proj1_k1">prêts analysés</span></div>
+          <div class="projet-chiffre"><strong><span class="chiffre" data-val="0.92" data-dec="2">0,92</span></strong><span data-i18n="proj1_k2">AUC du modèle retenu</span></div>
+          <div class="projet-chiffre"><strong><span class="chiffre" data-val="6" data-dec="0">6</span></strong><span data-i18n="proj1_k3">modèles comparés</span></div>
+        </div>
         <div class="tags" data-i18n-html="proj_tags_1"><span>R</span><span>XGBoost</span><span>Grille de score</span><span>Valeurs de Shapley</span><span>Shiny</span><span>Docker</span><span>Risque de crédit</span></div>
         <div class="projet-actions">
           <a class="btn-demo" href="https://credit-risk-app-c8ye.onrender.com" target="_blank" rel="noopener noreferrer" title="L'application est hébergée gratuitement sur Render : le premier chargement peut prendre environ 1 minute."><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-i18n="proj1_demo">Ouvrir l'application</span></a>
@@ -276,13 +281,17 @@
           </div>
           <span class="projet-niveau">M1-S1</span>
         </div>
-        <p data-i18n="proj5_desc">Projet de bout en bout sur près de 100 000 commandes réelles d'Olist, mené sur 4 mois en 2026 : pipeline ELT de 9 fichiers CSV vers un entrepôt PostgreSQL en étoile, indicateurs métier en SQL avancé (fonctions de fenêtre, RFM, cohortes), 14 contrôles qualité testés en intégration continue, puis un dashboard Streamlit déployé et un rapport Power BI (Power Query, mesures DAX) pour le directeur e-commerce. Principal constat : au-delà de 4 jours de retard de livraison, la part de mauvaises notes passe de 9 % à plus de 60 %.</p>
+        <p data-i18n="proj5_desc">Projet de bout en bout mené sur 4 mois à partir des données réelles d'Olist : pipeline ELT de 9 fichiers CSV vers un entrepôt PostgreSQL en étoile, indicateurs métier en SQL avancé (fonctions de fenêtre, RFM, cohortes), contrôles qualité en intégration continue, puis un dashboard Streamlit déployé et un rapport Power BI (Power Query, mesures DAX) pour le directeur e-commerce.</p>
+        <div class="projet-chiffres">
+          <div class="projet-chiffre"><strong><span class="chiffre-pre">≈ </span><span class="chiffre" data-val="100000" data-dec="0">100 000</span></strong><span data-i18n="proj5_k1">commandes réelles</span></div>
+          <div class="projet-chiffre"><strong><span class="chiffre" data-val="14" data-dec="0">14</span></strong><span data-i18n="proj5_k2">contrôles qualité testés</span></div>
+          <div class="projet-chiffre"><strong><span class="chiffre-pre">&gt; </span><span class="chiffre" data-val="60" data-dec="0">60</span><span class="chiffre-unite">%</span></strong><span data-i18n="proj5_k3">de mauvaises notes après 4 jours de retard</span></div>
+        </div>
         <div class="tags" data-i18n-html="proj_tags_5"><span>PostgreSQL</span><span>SQL avancé</span><span>Entrepôt en étoile</span><span>ELT</span><span>Python</span><span>Pandas</span><span>Streamlit</span><span>Power BI</span><span>DAX</span><span>pytest</span><span>GitHub Actions</span></div>
         <div class="projet-actions">
           <a class="btn-demo" href="https://mohamed-fofana-olist-analytics.streamlit.app/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-i18n="proj5_demo">Ouvrir le dashboard</span></a>
           <a class="projet-github" href="https://github.com/Mohamed-Fof/olist-analytics" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span data-i18n="proj_code">Code source</span></a>
         </div>
-      </div>
       </div>
 
       <div class="projet-card">
@@ -346,18 +355,18 @@
         <div class="skill-bars">
           <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
           <div class="skill-bar"><span>R / RStudio</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
-          <div class="skill-bar"><span>MATLAB</span><div class="bar"><div class="fill" style="width:65%"></div></div></div>
           <div class="skill-bar"><span>SQL</span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
-          <div class="skill-bar"><span>HTML/CSS/JS</span><div class="bar"><div class="fill" style="width:60%"></div></div></div>
           <div class="skill-bar"><span>SAS</span><div class="bar"><div class="fill" style="width:60%"></div></div></div>
-          <div class="skill-bar"><span>VBA</span><div class="bar"><div class="fill" style="width:55%"></div></div></div>
           <div class="skill-bar"><span>Java / C</span><div class="bar"><div class="fill" style="width:55%"></div></div></div>
+          <div class="skill-bar"><span>HTML / CSS</span><div class="bar"><div class="fill" style="width:60%"></div></div></div>
+          <div class="skill-bar"><span>VBA</span><div class="bar"><div class="fill" style="width:55%"></div></div></div>
+          <div class="skill-bar"><span>MATLAB</span><div class="bar"><div class="fill" style="width:65%"></div></div></div>
         </div>
       </div>
 
       <div class="skill-category">
         <h3 data-i18n="comp_ia">Machine Learning & IA</h3>
-        <div class="tags-list" data-i18n-html="skills_ia"><span>Machine Learning supervisé</span><span>Classification</span><span>Régression logistique</span><span>Naive Bayes</span><span>Modélisation prédictive</span><span>Data Mining</span><span>Analyse de données</span><span>Algorithmes stochastiques</span><span>Agents conversationnels (LLM)</span><span>API IA</span></div>
+        <div class="tags-list" data-i18n-html="skills_ia"><span>Apprentissage supervisé</span><span>Apprentissage non supervisé</span><span>ACP</span><span>AFC / ACM</span><span>Clustering (k-means, CAH)</span><span>Classification</span><span>Régression logistique</span><span>XGBoost</span><span>Naive Bayes</span><span>Modélisation prédictive</span><span>Data Mining</span><span>Algorithmes stochastiques</span><span>Agents conversationnels (LLM)</span><span>API IA</span></div>
       </div>
 
       <div class="skill-category">

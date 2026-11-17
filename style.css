@@ -272,15 +272,48 @@ nav ul a:hover { color: var(--primary); }
 
 /* PROJETS */
 .projets { padding: 6rem 6%; background: var(--white); }
-.projets-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+/* Grille sur 6 colonnes : les deux projets déployés côte à côte (3 + 3), les autres par trois (2 + 2 + 2) */
+.projets-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.75rem; align-items: stretch; }
 .projet-card {
-  background: var(--white); border-radius: 12px; padding: 1.5rem;
+  grid-column: span 2;
+  display: flex; flex-direction: column;
+  background: var(--white); border-radius: 14px; padding: 1.6rem;
   border: 1px solid var(--border); position: relative;
-  transition: all 0.3s;
+  transition: transform 0.35s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
-.projet-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(37,99,235,0.15); border-color: var(--primary); }
+.projet-card.projet-featured { grid-column: span 3; padding: 2rem; }
+.projet-live-badge { align-self: flex-start; }
+.projet-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px -12px rgba(37,99,235,0.3); border-color: var(--primary); }
+/* Les boutons s'alignent en bas de chaque carte, quelle que soit la longueur du texte */
+.projet-card .projet-actions { margin-top: auto; padding-top: 1.2rem; }
+.projet-card .tags { margin-top: 0; }
+/* Survol : l'icône s'anime, les mots-clés réagissent */
+.projet-icon { transition: transform 0.4s cubic-bezier(.3,1.5,.5,1), background 0.3s; }
+.projet-card:hover .projet-icon { transform: rotate(-6deg) scale(1.08); background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(124,58,237,0.2)); }
+.projet-card .tags span { transition: transform 0.2s ease, background 0.2s ease; }
+.projet-card .tags span:hover { transform: translateY(-2px); }
+.btn-demo svg, .projet-github svg { transition: transform 0.2s ease; }
+.btn-demo:hover svg { transform: translate(2px, -2px); }
+.projet-github:hover svg { transform: scale(1.12); }
+
+/* Chiffres clés des projets déployés */
+.projet-chiffres {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;
+  margin: 0.2rem 0 1.2rem; padding: 0.9rem; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.06), rgba(124,58,237,0.06));
+}
+.projet-chiffre { display: flex; flex-direction: column; gap: 0.2rem; text-align: center; min-width: 0; }
+.projet-chiffre strong {
+  font-size: 1.35rem; font-weight: 800; line-height: 1.1; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.chiffre-pre { font-size: 0.8em; font-weight: 700; }
+.chiffre-unite { margin-left: 0.12em; }
+.projet-chiffre > span { font-size: 0.72rem; line-height: 1.3; color: var(--gray); }
 /* En-tête : icône + titre + niveau */
-.projet-head { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 0.9rem; }
+.projet-head { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 1.1rem; }
 .projet-icon {
   width: 42px; height: 42px; flex: none; border-radius: 11px;
   display: grid; place-items: center;
@@ -300,7 +333,7 @@ nav ul a:hover { color: var(--primary); }
   padding: 0.2rem 0.6rem; border-radius: 20px;
   font-size: 0.72rem; font-weight: 600;
 }
-.projet-card p { color: var(--gray); font-size: 0.85rem; line-height: 1.6; margin-bottom: 0.9rem; }
+.projet-card p { color: var(--gray); font-size: 0.87rem; line-height: 1.7; margin-bottom: 1.1rem; }
 
 /* Actions : démo + code source */
 .projet-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 1rem; }
@@ -734,6 +767,10 @@ footer p { font-size: 0.9rem; }
   .about-content { gap: 2rem; }
   .momo-container { gap: 2rem; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .projets-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .projet-card { grid-column: span 1; }
+  .projet-card.projet-featured { grid-column: span 2; }
+  .projet-card:not(.projet-featured):last-child:nth-child(odd) { grid-column: span 2; }
 }
 
 /* Tablette portrait (≤ 900px) */
@@ -797,6 +834,9 @@ footer p { font-size: 0.9rem; }
   .portrait { --w: 180px; }
   .skills-grid { grid-template-columns: 1fr; }
   .projets-grid { grid-template-columns: 1fr; }
+  .projet-card, .projet-card.projet-featured, .projet-card:not(.projet-featured):last-child:nth-child(odd) { grid-column: auto; }
+  .projet-card.projet-featured { padding: 1.3rem; }
+  .projet-chiffre strong { font-size: 1.15rem; }
   .jeu-lab, .notion { padding: 1.3rem; }
   .lab-onglets { overflow-x: auto; }
   .rang-nom { width: 76px; font-size: 0.76rem; }
@@ -948,6 +988,9 @@ footer p { font-size: 0.9rem; }
   transition-delay: calc(var(--i, 0) * 90ms);
 }
 .motion .reveal.visible { opacity: 1; transform: none; }
+.motion .skill-category.reveal:not(.visible) .fill { width: 0 !important; }
+.motion .skill-category .fill { transition: width 1.2s cubic-bezier(.2,.7,.2,1) calc(var(--i, 0) * 90ms + 0.25s); }
+
 /* Le trait sous chaque titre se dessine à l'arrivée du titre */
 .motion .section-header.reveal .underline { width: 0; transition: width 0.7s cubic-bezier(.2,.7,.2,1) 0.3s; }
 .motion .section-header.reveal.visible .underline { width: 60px; }
@@ -978,4 +1021,6 @@ footer p { font-size: 0.9rem; }
   .skill-category, .tl-content, .momo-item, .type-jeu { transition: none; }
   .skill-category:hover, .tl-content:hover, .momo-item:hover, .type-jeu:hover { transform: none; }
   #histo .histo-tour:last-child, .rebond, .rang, .rang .rang-barre span, .evo-graphe.trace { animation: none; }
+  .projet-card, .projet-icon, .projet-card .tags span, .btn-demo svg, .projet-github svg { transition: none; }
+  .projet-card:hover, .projet-card:hover .projet-icon, .projet-card .tags span:hover { transform: none; }
 }

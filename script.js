@@ -60,8 +60,26 @@ document.querySelectorAll('.skill-category').forEach(el => observer.observe(el))
       el.style.removeProperty('--i');
     };
     el.addEventListener('transitionend', fin);
+    // Chiffres clés : comptent de 0 à leur valeur, au format de la langue affichée
+    el.querySelectorAll('.chiffre[data-val]').forEach(compter);
+    // Mots-clés des projets : apparaissent en cascade juste après la carte
+    const rang = +el.style.getPropertyValue('--i') || 0;
+    el.querySelectorAll('.tags span').forEach((s, k) => s.animate(
+      [{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 400, delay: rang * 90 + 300 + Math.min(k, 10) * 35, easing: 'ease', fill: 'backwards' }));
   }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   els.forEach(el => io.observe(el));
+
+  function compter(el) {
+    const cible = +el.dataset.val, dec = +el.dataset.dec, debut = performance.now(), duree = 1400;
+    const format = v => v.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'fr-FR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    const pas = t => {
+      const p = Math.min((t - debut) / duree, 1);
+      el.textContent = format(cible * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+  }
 
   // 2. Laboratoire (Jeux & Société) : les scores rebondissent, la courbe d'évolution se trace
   const rejouer = (el, cls) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
