@@ -119,8 +119,8 @@
       const [bx, by] = pos(b), [ccx, ccy] = pos(c);
       const etapes = [
         { de: pos(a), a: [bx, by], fin: () => flash(b) },
-        { de: [bx, by], a: [cx - 58, cy + (by - cy) * .35], fin: () => flash(anneau) },
-        { de: [cx + 58, cy + (ccy - cy) * .35], a: [ccx, ccy], fin: () => flash(c) },
+        { de: [bx, by], a: [cx - 76, cy + (by - cy) * .42], fin: () => flash(anneau) },
+        { de: [cx + 76, cy + (ccy - cy) * .42], a: [ccx, ccy], fin: () => flash(c) },
         { de: [ccx, ccy], a: pos(s), fin: () => { flash(s); flash(etiquettes[sorties.indexOf(s)]); } }
       ];
       const point = document.createElementNS(SVG, 'circle');
