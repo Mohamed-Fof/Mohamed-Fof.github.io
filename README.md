@@ -8,7 +8,7 @@ Portfolio personnel déployé sur GitHub Pages.
 
 ## Contenu
 
-- **Accueil** : présentation, disponibilité, chiffres clés
+- **Accueil** : présentation animée en réseau de neurones (compétences → domaines visés : finance, assurance, santé)
 - **Projets** : scoring de risque de crédit et Olist Analytics (études de cas avec graphiques), puis autres projets
 - **Parcours** : expérience, formation et distinction
 - **Compétences**, bandeau **MF Consulting** (agent Momo) et **Contact**
@@ -18,11 +18,12 @@ Portfolio personnel déployé sur GitHub Pages.
 
 | Fichier | Rôle |
 |---|---|
-| `index.html`, `site.css`, `site.js` | page d'accueil, son style et ses animations |
+| `site.css`, `site.js` | système de design et comportements communs aux deux pages (navigation, animations, réseau de neurones, courbe ROC) |
 | `init.js` | thème et état initial, chargé avant l'affichage |
-| `app.js` | traductions FR / EN et bascule de thème (partagé avec `jeux.html`) |
+| `app.js` | traductions FR / EN et bascule de thème |
 | `chat.js` | widget de l'agent Momo |
-| `jeux.html`, `jeux.js`, `style.css`, `script.js` | page Jeux & Société |
+| `index.html` | page d'accueil |
+| `jeux.html`, `jeux.css`, `jeux.js` | page Jeux & Société et son laboratoire |
 
 ## Sécurité
 
