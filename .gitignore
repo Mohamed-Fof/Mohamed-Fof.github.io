@@ -9,6 +9,7 @@
 !og-jeux.jpg
 # … et le portrait de la page d'accueil (déjà public, auparavant intégré au HTML)
 !portrait.jpg
+!apple-touch-icon.png
 
 # Fichiers système
 .DS_Store
