@@ -244,7 +244,7 @@ strong { font-weight: 600; color: var(--ink); }
   background: linear-gradient(100deg, var(--accent) 10%, var(--accent-2) 90%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.hero-lead { margin-top: 1.6rem; max-width: 60ch; font-size: clamp(1.02rem, 1.4vw, 1.15rem); color: var(--ink-2); text-align: justify; }
+.hero-lead { margin-top: 1.6rem; max-width: 60ch; font-size: clamp(1.02rem, 1.4vw, 1.15rem); color: var(--ink-2); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.2rem; }
 .socials { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2rem; }
 .socials a {
@@ -488,6 +488,22 @@ strong { font-weight: 600; color: var(--ink); }
 .footer { border-top: 1px solid var(--line); padding: 2rem 0 2.4rem; font-size: .86rem; color: var(--muted); }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem 2rem; }
 .footer a:hover { color: var(--ink); }
+
+/* ---------- Texte justifié (paragraphes courants, accueil et Jeux & Société) ---------- */
+.hero-lead, .section-head p, .feature-body > p:not(.stack), .mini p, .tl-card p:not(.tl-org), .mf-text p:not(.kicker), .tile-lead,
+.jeux-intro, .famille-desc, .type-jeu p, .notion p, .passerelle, .jeu-ext-txt > span, .lab-accroche, .lab-sous-titre {
+  text-align: justify; text-justify: inter-word;
+}
+/* Colonnes étroites : césure des mots longs seulement, pour éviter les trous entre les mots */
+.mini p, .type-jeu p, .jeu-ext-txt > span {
+  -webkit-hyphens: auto; hyphens: auto; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; hyphenate-limit-chars: 10 4 4;
+}
+@media (max-width: 600px) {
+  .hero-lead, .section-head p, .feature-body > p:not(.stack), .tl-card p:not(.tl-org), .mf-text p:not(.kicker), .tile-lead,
+  .jeux-intro, .famille-desc, .notion p, .passerelle, .lab-accroche, .lab-sous-titre {
+    -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 10 4 4;
+  }
+}
 
 /* =====================================================================
    MOUVEMENT — html.js est posé par init.js avant l'affichage ; sans JavaScript tout reste visible
