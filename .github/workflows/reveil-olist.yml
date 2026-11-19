@@ -1,0 +1,43 @@
+name: Garder le dashboard Olist éveillé
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # toutes les 6 h
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reveil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer Playwright
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+      - name: Ouvrir le dashboard et le réveiller si besoin
+        env:
+          APP_URL: https://mohamed-fofana-olist-analytics.streamlit.app/
+        run: |
+          python - <<'PY'
+          import os
+          from playwright.sync_api import sync_playwright
+          url = os.environ["APP_URL"]
+          with sync_playwright() as p:
+              page = p.chromium.launch().new_page()
+              page.goto(url, wait_until="domcontentloaded", timeout=90_000)
+              page.wait_for_timeout(8_000)
+              bouton = page.get_by_role("button", name="get this app back up")
+              if bouton.count():
+                  print("Application en veille : réveil en cours")
+                  bouton.first.click()
+                  page.wait_for_timeout(90_000)
+              else:
+                  print("Application déjà active")
+                  page.wait_for_timeout(20_000)
+          PY
